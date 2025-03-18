@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Pale.Red
 }
 \description{
-Pale Red color
+This is a pale red color with the hex code #F1A7BB.
+}
+\details{
+\if{html}{\figure{Pale.Red.png}{options: width=10 alt="Pale Red color swatch"}}
+\if{latex}{\figure{Pale.Red.png}{options: width=0.5in}}
 }
 \keyword{datasets}

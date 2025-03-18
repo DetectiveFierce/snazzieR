@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Pale.Green
 }
 \description{
-Pale Green color
+This is a pale green color with the hex code #C4E18E.
+}
+\details{
+\if{html}{\figure{Pale.Green.png}{options: width=10 alt="Pale Green color swatch"}}
+\if{latex}{\figure{Pale.Green.png}{options: width=0.5in}}
 }
 \keyword{datasets}

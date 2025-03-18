@@ -4,6 +4,9 @@
 #' color codes for easy reference. The palette includes shades of Red, Orange,
 #' Yellow, Green, Blue, Purple, and Grey.
 #'
+#' \if{html}{\figure{color.ref.png}{options: width=45 alt="Light Grey color swatch"}}
+#' \if{latex}{\figure{color.ref.png}{options: width=4.5in}}
+#'
 #' @return A plot displaying the color palette.
 #' @importFrom graphics par rect text axis
 #' @export

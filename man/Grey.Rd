@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Grey
 }
 \description{
-Grey color
+This is a grey color with the hex code #6F646C.
+}
+\details{
+\if{html}{\figure{Grey.png}{options: width=10 alt="Grey color swatch"}}
+\if{latex}{\figure{Grey.png}{options: width=0.5in}}
 }
 \keyword{datasets}

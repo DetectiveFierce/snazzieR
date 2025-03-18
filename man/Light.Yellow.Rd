@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Light.Yellow
 }
 \description{
-Light Yellow color
+This is a light yellow color with the hex code #FFE373.
+}
+\details{
+\if{html}{\figure{Light.Yellow.png}{options: width=10 alt="Light Yellow color swatch"}}
+\if{latex}{\figure{Light.Yellow.png}{options: width=0.5in}}
 }
 \keyword{datasets}

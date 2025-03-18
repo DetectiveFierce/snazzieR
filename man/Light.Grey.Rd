@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Light.Grey
 }
 \description{
-Light Grey color
+This is a light grey color with the hex code #9E949B.
+}
+\details{
+\if{html}{\figure{Light.Grey.png}{options: width=10 alt="Light Grey color swatch"}}
+\if{latex}{\figure{Light.Grey.png}{options: width=0.5in}}
 }
 \keyword{datasets}

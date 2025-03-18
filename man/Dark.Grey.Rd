@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Dark.Grey
 }
 \description{
-Dark Grey color
+This is a dark grey color with the hex code #403A3F.
+}
+\details{
+\if{html}{\figure{Dark.Grey.png}{options: width=10 alt="Dark Grey color swatch"}}
+\if{latex}{\figure{Dark.Grey.png}{options: width=0.5in}}
 }
 \keyword{datasets}

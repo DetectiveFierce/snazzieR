@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Pale.Orange
 }
 \description{
-Pale Orange color
+This is a pale orange color with the hex code #F4CF90.
+}
+\details{
+\if{html}{\figure{Pale.Orange.png}{options: width=10 alt="Pale Orange color swatch"}}
+\if{latex}{\figure{Pale.Orange.png}{options: width=0.5in}}
 }
 \keyword{datasets}

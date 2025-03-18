@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Red
 }
 \description{
-Red color
+This is a red color with the hex code #C31E4A.
+}
+\details{
+\if{html}{\figure{Red.png}{options: width=10 alt="Red color swatch"}}
+\if{latex}{\figure{Red.png}{options: width=0.5in}}
 }
 \keyword{datasets}

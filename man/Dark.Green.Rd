@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Dark.Green
 }
 \description{
-Dark Green color
+This is a dark green color with the hex code #54711E.
+}
+\details{
+\if{html}{\figure{Dark.Green.png}{options: width=10 alt="Dark Green color swatch"}}
+\if{latex}{\figure{Dark.Green.png}{options: width=0.5in}}
 }
 \keyword{datasets}

@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Dark.Purple
 }
 \description{
-Dark Purple color
+This is a dark purple color with the hex code #4E2183.
+}
+\details{
+\if{html}{\figure{Dark.Purple.png}{options: width=10 alt="Dark Purple color swatch"}}
+\if{latex}{\figure{Dark.Purple.png}{options: width=0.5in}}
 }
 \keyword{datasets}

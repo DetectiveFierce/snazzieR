@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Pale.Blue
 }
 \description{
-Pale Blue color
+This is a pale blue color with the hex code #85F1FF.
+}
+\details{
+\if{html}{\figure{Pale.Blue.png}{options: width=10 alt="Pale Blue color swatch"}}
+\if{latex}{\figure{Pale.Blue.png}{options: width=0.5in}}
 }
 \keyword{datasets}

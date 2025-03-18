@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Pale.Purple
 }
 \description{
-Pale Purple color
+This is a pale purple color with the hex code #CAADEB.
+}
+\details{
+\if{html}{\figure{Pale.Purple.png}{options: width=10 alt="Pale Purple color swatch"}}
+\if{latex}{\figure{Pale.Purple.png}{options: width=0.5in}}
 }
 \keyword{datasets}

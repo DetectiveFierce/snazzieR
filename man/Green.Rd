@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Green
 }
 \description{
-Green color
+This is a green color with the hex code #83B02F.
+}
+\details{
+\if{html}{\figure{Green.png}{options: width=10 alt="Green color swatch"}}
+\if{latex}{\figure{Green.png}{options: width=0.5in}}
 }
 \keyword{datasets}

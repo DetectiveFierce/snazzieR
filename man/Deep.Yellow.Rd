@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Deep.Yellow
 }
 \description{
-Deep Yellow color
+This is a deep yellow color with the hex code #9D7F06.
+}
+\details{
+\if{html}{\figure{Deep.Yellow.png}{options: width=10 alt="Deep Yellow color swatch"}}
+\if{latex}{\figure{Deep.Yellow.png}{options: width=0.5in}}
 }
 \keyword{datasets}

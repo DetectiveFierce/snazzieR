@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Purple
 }
 \description{
-Purple color
+This is a purple color with the hex code #743496.
+}
+\details{
+\if{html}{\figure{Purple.png}{options: width=10 alt="Purple color swatch"}}
+\if{latex}{\figure{Purple.png}{options: width=0.5in}}
 }
 \keyword{datasets}

@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Light.Purple
 }
 \description{
-Light Purple color
+This is a light purple color with the hex code #A06CDA.
+}
+\details{
+\if{html}{\figure{Light.Purple.png}{options: width=10 alt="Light Purple color swatch"}}
+\if{latex}{\figure{Light.Purple.png}{options: width=0.5in}}
 }
 \keyword{datasets}

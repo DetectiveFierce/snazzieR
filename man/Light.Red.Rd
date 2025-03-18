@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Light.Red
 }
 \description{
-Light Red color
+This is a light red color with the hex code #E66084.
+}
+\details{
+\if{html}{\figure{Light.Red.png}{options: width=10 alt="Light Red color swatch"}}
+\if{latex}{\figure{Light.Red.png}{options: width=0.5in}}
 }
 \keyword{datasets}

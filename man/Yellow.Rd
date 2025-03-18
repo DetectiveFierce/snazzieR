@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Yellow
 }
 \description{
-Yellow color
+This is a yellow color with the hex code #E8D206.
+}
+\details{
+\if{html}{\figure{Yellow.png}{options: width=10 alt="Yellow color swatch"}}
+\if{latex}{\figure{Yellow.png}{options: width=0.5in}}
 }
 \keyword{datasets}

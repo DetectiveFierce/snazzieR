@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Deep.Green
 }
 \description{
-Deep Green color
+This is a deep green color with the hex code #304011.
+}
+\details{
+\if{html}{\figure{Deep.Green.png}{options: width=10 alt="Deep Green color swatch"}}
+\if{latex}{\figure{Deep.Green.png}{options: width=0.5in}}
 }
 \keyword{datasets}

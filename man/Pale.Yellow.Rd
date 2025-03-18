@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Pale.Yellow
 }
 \description{
-Pale Yellow color
+This is a pale yellow color with the hex code #FFF8DC.
+}
+\details{
+\if{html}{\figure{Pale.Yellow.png}{options: width=10 alt="Pale Yellow color swatch"}}
+\if{latex}{\figure{Pale.Yellow.png}{options: width=0.5in}}
 }
 \keyword{datasets}

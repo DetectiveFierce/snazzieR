@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Pale.Grey
 }
 \description{
-Pale Grey color
+This is a pale grey color with the hex code #CFC9CD.
+}
+\details{
+\if{html}{\figure{Pale.Grey.png}{options: width=10 alt="Pale Grey color swatch"}}
+\if{latex}{\figure{Pale.Grey.png}{options: width=0.5in}}
 }
 \keyword{datasets}

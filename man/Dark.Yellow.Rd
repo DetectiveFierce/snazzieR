@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Dark.Yellow
 }
 \description{
-Dark Yellow color
+This is a dark yellow color with the hex code #CEA708.
+}
+\details{
+\if{html}{\figure{Dark.Yellow.png}{options: width=10 alt="Dark Yellow color swatch"}}
+\if{latex}{\figure{Dark.Yellow.png}{options: width=0.5in}}
 }
 \keyword{datasets}

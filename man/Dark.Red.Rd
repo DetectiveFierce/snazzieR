@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Dark.Red
 }
 \description{
-Dark Red color
+This is a dark red color with the hex code #9F193D.
+}
+\details{
+\if{html}{\figure{Dark.Red.png}{options: width=10 alt="Dark Red color swatch"}}
+\if{latex}{\figure{Dark.Red.png}{options: width=0.5in}}
 }
 \keyword{datasets}

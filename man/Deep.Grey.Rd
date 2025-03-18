@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Deep.Grey
 }
 \description{
-Deep Grey color
+This is a deep grey color with the hex code #151315.
+}
+\details{
+\if{html}{\figure{Deep.Grey.png}{options: width=10 alt="Deep Grey color swatch"}}
+\if{latex}{\figure{Deep.Grey.png}{options: width=0.5in}}
 }
 \keyword{datasets}

@@ -14,6 +14,10 @@ This function generates a plot displaying a predefined color palette with
 color codes for easy reference. The palette includes shades of Red, Orange,
 Yellow, Green, Blue, Purple, and Grey.
 }
+\details{
+\if{html}{\figure{color.ref.png}{options: width=45 alt="Light Grey color swatch"}}
+\if{latex}{\figure{color.ref.png}{options: width=4.5in}}
+}
 \examples{
 color.ref()
 }

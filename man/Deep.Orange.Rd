@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Deep.Orange
 }
 \description{
-Deep Orange color
+This is a deep orange color with the hex code #6F4B0B.
+}
+\details{
+\if{html}{\figure{Deep.Orange.png}{options: width=10 alt="Deep Orange color swatch"}}
+\if{latex}{\figure{Deep.Orange.png}{options: width=0.5in}}
 }
 \keyword{datasets}

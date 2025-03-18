@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Deep.Red
 }
 \description{
-Deep Red color
+This is a deep red color with the hex code #590D21.
+}
+\details{
+\if{html}{\figure{Deep.Red.png}{options: width=10 alt="Deep Red color swatch"}}
+\if{latex}{\figure{Deep.Red.png}{options: width=0.5in}}
 }
 \keyword{datasets}

@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Light.Green
 }
 \description{
-Light Green color
+This is a light green color with the hex code #ABD45E.
+}
+\details{
+\if{html}{\figure{Light.Green.png}{options: width=10 alt="Light Green color swatch"}}
+\if{latex}{\figure{Light.Green.png}{options: width=0.5in}}
 }
 \keyword{datasets}

@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Light.Orange
 }
 \description{
-Light Orange color
+This is a light orange color with the hex code #F0BF6A.
+}
+\details{
+\if{html}{\figure{Light.Orange.png}{options: width=10 alt="Light Orange color swatch"}}
+\if{latex}{\figure{Light.Orange.png}{options: width=0.5in}}
 }
 \keyword{datasets}

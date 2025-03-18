@@ -11,6 +11,10 @@ An object of class \code{character} of length 1.
 Deep.Purple
 }
 \description{
-Deep Purple color
+This is a deep purple color with the hex code #271041.
+}
+\details{
+\if{html}{\figure{Deep.Purple.png}{options: width=10 alt="Deep Purple color swatch"}}
+\if{latex}{\figure{Deep.Purple.png}{options: width=0.5in}}
 }
 \keyword{datasets}
