@@ -1,0 +1,24 @@
+Package: snazzieR
+Type: Package
+Title: snazzieR: Chic and Sleek Functions for Beautiful Statisticians
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Aidan J.", "Wagner",
+      email = "JesusButForGayPeople@proton.me",
+      role = c("aut", "cre")
+    )
+  )
+Description: Because your linear models deserve better than console output.
+    A sleek color palette and kable styling to make your regression results look sharper than they are.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+        ggplot2,
+        knitr,
+        kableExtra,
+        stats
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
