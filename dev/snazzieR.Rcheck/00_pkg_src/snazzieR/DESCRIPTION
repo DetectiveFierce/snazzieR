@@ -14,15 +14,11 @@ Description: Because your linear models deserve better than console output.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports:
-    ggplot2,
-    knitr,
-    kableExtra,
-    dplyr,
-    stats
+Imports: ggplot2, knitr, kableExtra, dplyr, stats
 RoxygenNote: 7.3.2
-Depends: 
-    R (>= 3.5)
-Suggests: 
-    testthat (>= 3.0.0)
+Depends: R (>= 4.1.0)
+Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
+NeedsCompilation: no
+Packaged: 2025-05-11 19:04:35 UTC; shared-psychosis
+Author: Aidan J. Wagner [aut, cre]

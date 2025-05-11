@@ -11,8 +11,8 @@
 #' library(ggplot2)
 #' ggplot(mtcars, aes(x = wt, y = mpg)) +
 #'   geom_point() +
-#'   summaR.theme()
-summaR.theme <- function() {
+#'   snazzieR.theme()
+snazzieR.theme <- function() {
   ggplot2::theme_minimal(base_size = 14, base_family = "Times") +
     ggplot2::theme(
       panel.background = ggplot2::element_rect(fill = "cornsilk1", color = NA),

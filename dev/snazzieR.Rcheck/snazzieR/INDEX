@@ -1,0 +1,13 @@
+ANOVA.summary.table     Generate a Summary Table for ANOVA Results
+color.ref               Display a Color Reference Palette
+colors                  SnazzieR Color Palette
+eigen.summary           Summarize Eigenvalues and Eigenvectors of a
+                        Covariance Matrix
+format.pls              Format PLS Model Output as LaTeX or Console
+                        Tables
+model.equation          Generate a Model Equation from a Linear Model
+model.summary.table     Generate a Summary Table for a Linear Model
+pls.regression          Partial Least Squares (PLS) Regression
+                        Interface
+snazzieR.theme          A Custom ggplot2 Theme for Publication-Ready
+                        Plots

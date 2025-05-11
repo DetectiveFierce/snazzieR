@@ -1,0 +1,367 @@
+
+R version 4.5.0 (2025-04-11) -- "How About a Twenty-Six"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "snazzieR"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> base::assign(".ExTimings", "snazzieR-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('snazzieR')
+
+Attaching package: ‘snazzieR’
+
+The following object is masked from ‘package:datasets’:
+
+    Orange
+
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("ANOVA.summary.table")
+> ### * ANOVA.summary.table
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: ANOVA.summary.table
+> ### Title: Generate a Summary Table for ANOVA Results
+> ### Aliases: ANOVA.summary.table
+> 
+> ### ** Examples
+> 
+> # Fit a linear model
+> model <- lm(mpg ~ wt + hp, data = mtcars)
+> 
+> # Generate the ANOVA summary table
+> ANOVA.summary.table(model, caption = "ANOVA Summary")
+\begin{table}[H]
+\centering
+\caption{\textbf{ ANOVA Summary }}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{|>{}l|r|r|r|l|l|>{}l|}
+\hline
+\textbf{Term} & \textbf{Df} & \textbf{Sum.Sq} & \textbf{Mean.Sq} & \textbf{F.Value} & \textbf{P.Value} & \textbf{Signif.}\\
+\hline
+\textbf{wt} & 1 & 847.72525 & 847.72525 & 126.04109 & 0 & :3\\
+\hline
+\textbf{hp} & 1 & 83.27418 & 83.27418 & 12.38133 & 0.00145 & :)\\
+\hline
+\textbf{Residuals} & 29 & 195.04775 & 6.72578 &  &  & :3\\
+\hline
+\end{tabular}
+\begin{tablenotes}[para]
+\item 
+\item 
+\item 
+\item significance codes -  :3 -  >0.001 
+\item :) - >0.01
+\item :/ - >0.05 
+\item 
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("ANOVA.summary.table", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("NIPALS.pls")
+> ### * NIPALS.pls
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: NIPALS.pls
+> ### Title: Partial Least Squares Regression via NIPALS (Internal)
+> ### Aliases: NIPALS.pls
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D X <- matrix(rnorm(100 * 10), 100, 10)
+> ##D Y <- matrix(rnorm(100 * 2), 100, 2)
+> ##D model <- pls.regression(X, Y, n.components = 3, calc.method = "NIPALS")
+> ##D model$coefficients
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("NIPALS.pls", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("SVD.pls")
+> ### * SVD.pls
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: SVD.pls
+> ### Title: Partial Least Squares Regression via SVD (Internal)
+> ### Aliases: SVD.pls
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D X <- matrix(rnorm(100 * 10), 100, 10)
+> ##D Y <- matrix(rnorm(100 * 2), 100, 2)
+> ##D model <- pls.regression(X, Y, n.components = 3, calc.method = "SVD")
+> ##D model$coefficients
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("SVD.pls", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("color.ref")
+> ### * color.ref
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: color.ref
+> ### Title: Display a Color Reference Palette
+> ### Aliases: color.ref
+> 
+> ### ** Examples
+> 
+> color.ref()
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("color.ref", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("eigen.summary")
+> ### * eigen.summary
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: eigen.summary
+> ### Title: Summarize Eigenvalues and Eigenvectors of a Covariance Matrix
+> ### Aliases: eigen.summary
+> 
+> ### ** Examples
+> 
+> cov_matrix <- matrix(c(4, 2, 2, 3), nrow = 2)
+> eigen.summary(cov_matrix)
+\begin{table}[!h]
+\centering
+\caption{Eigenvectors of Covariance Matrix}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{cc}
+
+\multicolumn{1}{c}{ } \\
+$\lambda_1 = 5.5616$ & $\lambda_2 = 1.4384$\\
+\arrayrulecolor{white}
+\midrule
+$\begin{bmatrix}0.788205438016109\\0.615412209402636\end{bmatrix}$ & $\begin{bmatrix}-0.615412209402636\\0.788205438016109\end{bmatrix}$\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[para]
+\item 
+\item 
+\item 
+\item 
+\item 
+\item  Total Variance = 7
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("eigen.summary", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("model.equation")
+> ### * model.equation
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: model.equation
+> ### Title: Generate a Model Equation from a Linear Model
+> ### Aliases: model.equation
+> 
+> ### ** Examples
+> 
+> # Fit a linear model
+> model <- lm(mpg ~ wt + hp, data = mtcars)
+> 
+> # Get LaTeX equation
+> model.equation(model)
+[1] "\\[\\text{mpg} = 37.227 - 3.878 (\\text{wt}) - 0.032 (\\text{hp})\\]"
+attr(,"class")
+[1] "knit_asis"
+attr(,"knit_cacheable")
+[1] NA
+> 
+> # Print equation to console
+> model.equation(model, latex = FALSE)
+mpg = 37.227 - 3.878 (wt) - 0.032 (hp) 
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("model.equation", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("model.summary.table")
+> ### * model.summary.table
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: model.summary.table
+> ### Title: Generate a Summary Table for a Linear Model
+> ### Aliases: model.summary.table
+> 
+> ### ** Examples
+> 
+> # Fit a linear model
+> model <- lm(mpg ~ wt + hp, data = mtcars)
+> 
+> # Generate the summary table
+> model.summary.table(model, caption = "Linear Model Summary")
+\begin{table}[H]
+\centering
+\caption{\textbf{ Linear Model Summary } \newline \textbf{ mpg = 37.227 + -3.878*wt + -0.032*hp }}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{|>{}l|l|l|l|l||>{}l|>{}r|}
+\hline
+\textbf{Term} & \textbf{Estimate} & \textbf{Std.Error} & \textbf{P.Value} & \textbf{Signif.} & \textbf{Statistic} & \textbf{Value}\\
+\hline
+\textbf{(Intercept)} & 37.22727 & 1.59879 & 0 & :3 & \textbf{MSE} & 6.09524\\
+\hline
+\textbf{wt} & -3.87783 & 0.63273 & 0 & :3 & \textbf{MSE adj.} & 6.72578\\
+\hline
+\textbf{hp} & -0.03177 & 0.00903 & 0.00145 & :) & \textbf{df} & 29.00000\\
+\hline
+\textbf{} &  &  &  &  & \textbf{R-squared} & 0.82679\\
+\hline
+\textbf{} &  &  &  &  & \textbf{R-squared adj.} & 0.81484\\
+\hline
+\end{tabular}
+\begin{tablenotes}[para]
+\item 
+\item 
+\item 
+\item 
+\item significance codes -  :3 -  >0.001 
+\item :) - >0.01
+\item :/ - >0.05 
+\item 
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("model.summary.table", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("pls.regression")
+> ### * pls.regression
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: pls.regression
+> ### Title: Partial Least Squares (PLS) Regression Interface
+> ### Aliases: pls.regression
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D X <- matrix(rnorm(100 * 10), 100, 10)
+> ##D Y <- matrix(rnorm(100 * 2), 100, 2)
+> ##D 
+> ##D # Using SVD (default)
+> ##D model1 <- pls.regression(X, Y, n.components = 3)
+> ##D 
+> ##D # Using NIPALS
+> ##D model2 <- pls.regression(X, Y, n.components = 3, calc.method = "NIPALS")
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("pls.regression", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("snazzieR.theme")
+> ### * snazzieR.theme
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: snazzieR.theme
+> ### Title: A Custom ggplot2 Theme for Publication-Ready Plots
+> ### Aliases: snazzieR.theme
+> 
+> ### ** Examples
+> 
+> library(ggplot2)
+> ggplot(mtcars, aes(x = wt, y = mpg)) +
++   geom_point() +
++   snazzieR.theme()
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("snazzieR.theme", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> ### * <FOOTER>
+> ###
+> cleanEx()
+
+detaching ‘package:ggplot2’
+
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.883 0.026 0.917 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

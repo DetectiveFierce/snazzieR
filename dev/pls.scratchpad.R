@@ -30,3 +30,5 @@ wine.model <- pls.regression(x.mat.wine, y.mat.wine, n.components = 2)
 
 # Format and print to console
 format.pls(wine.model, latex = FALSE, include.scores = TRUE)
+
+
