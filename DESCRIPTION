@@ -1,18 +1,25 @@
 Package: snazzieR
 Type: Package
 Title: snazzieR: Chic and Sleek Functions for Beautiful Statisticians
-Version: 0.1.0
+Version: 0.1.1
+Author: Aidan J. Wagner [aut, cre]
 Maintainer: Aidan J. Wagner <JesusButForGayPeople@proton.me>
 Description: Because your linear models deserve better than console output.
     A sleek color palette and kable styling to make your regression results look sharper than they are.
+    Includes support for Partial Least Squares (PLS) regression via both the SVD and NIPALS algorithms,
+    along with a unified interface for model fitting and fabulous LaTeX and console output formatting.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-        ggplot2,
-        knitr,
-        kableExtra,
-        stats
+    ggplot2,
+    knitr,
+    kableExtra,
+    dplyr,
+    stats
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 3.5)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

@@ -1,354 +1,296 @@
-#' Deep Red color
+#' SnazzieR Color Palette
 #'
-#' This is a deep red color with the hex code #590D21.
+#' A collection of named hex colors grouped by hue and tone.
+#' Each color is available as an exported object (e.g., \code{Red}, \code{Dark.Red}).
 #'
-#' \if{html}{\figure{Deep.Red.png}{options: width=10 alt="Deep Red color swatch"}}
-#' \if{latex}{\figure{Deep.Red.png}{options: width=0.5in}}
+#' @details
+#' \if{html}{
+#' <table style='width:100%; font-family: monospace; border-collapse: collapse;'>
+#' <tr><th align='left'>Name</th><th align='left'>Hex</th><th align='left'>Swatch</th></tr>
+#' <tr><td>Dark.Red</td><td>#9F193D</td><td><img src='figures/Dark.Red.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Red</td><td>#C31E4A</td><td><img src='figures/Red.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Light.Red</td><td>#E66084</td><td><img src='figures/Light.Red.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Pale.Red</td><td>#F1A7BB</td><td><img src='figures/Pale.Red.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Dark.Orange</td><td>#A77011</td><td><img src='figures/Dark.Orange.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Orange</td><td>#E99F1F</td><td><img src='figures/Orange.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Light.Orange</td><td>#F0BF6A</td><td><img src='figures/Light.Orange.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Pale.Orange</td><td>#F4CF90</td><td><img src='figures/Pale.Orange.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Yellow</td><td>#E8D206</td><td><img src='figures/Yellow.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Light.Yellow</td><td>#FFE373</td><td><img src='figures/Light.Yellow.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Pale.Yellow</td><td>#FFF8DC</td><td><img src='figures/Pale.Yellow.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Dark.Green</td><td>#54711E</td><td><img src='figures/Dark.Green.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Green</td><td>#83B02F</td><td><img src='figures/Green.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Light.Green</td><td>#ABD45E</td><td><img src='figures/Light.Green.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Pale.Green</td><td>#C4E18E</td><td><img src='figures/Pale.Green.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Dark.Blue</td><td>#004852</td><td><img src='figures/Dark.Blue.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Blue</td><td>#008C9E</td><td><img src='figures/Blue.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Light.Blue</td><td>#1FE5FF</td><td><img src='figures/Light.Blue.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Pale.Blue</td><td>#85F1FF</td><td><img src='figures/Pale.Blue.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Dark.Purple</td><td>#4E2183</td><td><img src='figures/Dark.Purple.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Purple</td><td>#743496</td><td><img src='figures/Purple.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Light.Purple</td><td>#A06CDA</td><td><img src='figures/Light.Purple.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Pale.Purple</td><td>#CAADEB</td><td><img src='figures/Pale.Purple.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Dark.Grey</td><td>#403A3F</td><td><img src='figures/Dark.Grey.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Grey</td><td>#6F646C</td><td><img src='figures/Grey.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Light.Grey</td><td>#9E949B</td><td><img src='figures/Light.Grey.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' <tr><td>Pale.Grey</td><td>#CFC9CD</td><td><img src='figures/Pale.Grey.png' style='width:1em; height:1em; border:1px solid #000;'></td></tr>
+#' </table>
+#' }
+#' \if{latex}{
+#' This palette consists of named hex colors. Each color's name (e.g., \code{Dark.Red}) is available as an exported object.
 #'
+#' Swatch images are embedded below (not selectable):
+#'
+#' \out{
+#' \\renewcommand{\\arraystretch}{1.4}
+#' \\begin{tabular}{@{}l l c l l c l l@{}}
+#' \\textbf{Color} & \\textbf{Swatch} & & \\textbf{Color} & \\textbf{Swatch} & & \\textbf{Color} & \\textbf{Swatch} \\\\
+#' \\hline
+#' & & & & & & & \\\\
+#' \\raisebox{0.75em}{Deep.Red}     & \\includegraphics[width=2em]{Deep.Red.png}     && \\raisebox{0.75em}{Deep.Green}   & \\includegraphics[width=2em]{Deep.Green.png}     && \\raisebox{0.75em}{Deep.Grey}    & \\includegraphics[width=2em]{Deep.Grey.png} \\\\
+#' \\raisebox{0.75em}{Dark.Red}     & \\includegraphics[width=2em]{Dark.Red.png}     && \\raisebox{0.75em}{Dark.Green}   & \\includegraphics[width=2em]{Dark.Green.png}     && \\raisebox{0.75em}{Dark.Grey}    & \\includegraphics[width=2em]{Dark.Grey.png} \\\\
+#' \\raisebox{0.75em}{Red}          & \\includegraphics[width=2em]{Red.png}          && \\raisebox{0.75em}{Green}        & \\includegraphics[width=2em]{Green.png}          && \\raisebox{0.75em}{Grey}         & \\includegraphics[width=2em]{Grey.png} \\\\
+#' \\raisebox{0.75em}{Light.Red}    & \\includegraphics[width=2em]{Light.Red.png}    && \\raisebox{0.75em}{Light.Green}  & \\includegraphics[width=2em]{Light.Green.png}    && \\raisebox{0.75em}{Light.Grey}   & \\includegraphics[width=2em]{Light.Grey.png} \\\\
+#' \\raisebox{0.75em}{Pale.Red}     & \\includegraphics[width=2em]{Pale.Red.png}     && \\raisebox{0.75em}{Pale.Green}   & \\includegraphics[width=2em]{Pale.Green.png}     && \\raisebox{0.75em}{Pale.Grey}    & \\includegraphics[width=2em]{Pale.Grey.png} \\\\
+#' \\raisebox{0.75em}{Deep.Orange}  & \\includegraphics[width=2em]{Deep.Orange.png}  && \\raisebox{0.75em}{Deep.Blue}    & \\includegraphics[width=2em]{Deep.Blue.png}      &&              &                                   \\\\
+#' \\raisebox{0.75em}{Dark.Orange}  & \\includegraphics[width=2em]{Dark.Orange.png}  && \\raisebox{0.75em}{Dark.Blue}    & \\includegraphics[width=2em]{Dark.Blue.png}      &&              &                                   \\\\
+#' \\raisebox{0.75em}{Orange}       & \\includegraphics[width=2em]{Orange.png}       && \\raisebox{0.75em}{Blue}         & \\includegraphics[width=2em]{Blue.png}           &&              &                                   \\\\
+#' \\raisebox{0.75em}{Light.Orange} & \\includegraphics[width=2em]{Light.Orange.png} && \\raisebox{0.75em}{Light.Blue}   & \\includegraphics[width=2em]{Light.Blue.png}     &&              &                                   \\\\
+#' \\raisebox{0.75em}{Pale.Orange}  & \\includegraphics[width=2em]{Pale.Orange.png}  && \\raisebox{0.75em}{Pale.Blue}    & \\includegraphics[width=2em]{Pale.Blue.png}      &&              &                                   \\\\
+#' \\raisebox{0.75em}{Deep.Yellow}  & \\includegraphics[width=2em]{Deep.Yellow.png}  && \\raisebox{0.75em}{Deep.Purple}  & \\includegraphics[width=2em]{Deep.Purple.png}    &&              &                                   \\\\
+#' \\raisebox{0.75em}{Dark.Yellow}  & \\includegraphics[width=2em]{Dark.Yellow.png}  && \\raisebox{0.75em}{Dark.Purple}  & \\includegraphics[width=2em]{Dark.Purple.png}    &&              &                                   \\\\
+#' \\raisebox{0.75em}{Yellow}       & \\includegraphics[width=2em]{Yellow.png}       && \\raisebox{0.75em}{Purple}       & \\includegraphics[width=2em]{Purple.png}         &&              &                                   \\\\
+#' \\raisebox{0.75em}{Light.Yellow} & \\includegraphics[width=2em]{Light.Yellow.png} && \\raisebox{0.75em}{Light.Purple} & \\includegraphics[width=2em]{Light.Purple.png}   &&              &                                   \\\\
+#' \\raisebox{0.75em}{Pale.Yellow}  & \\includegraphics[width=2em]{Pale.Yellow.png}  && \\raisebox{0.75em}{Pale.Purple}  & \\includegraphics[width=2em]{Pale.Purple.png}    &&              &                                   \\\\
+#' & & & & & & & \\\\
+#' \\end{tabular}
+#' }
+#'
+#' For the full list and hex codes, use \code{names(color.list)} or see \code{?color.list}.
+#' }
+
+#'
+#' @format Each color is a character string representing a hex code.
+#' @seealso \code{\link{color.list}}, \code{\link{color.ref}}
+#' @name colors
+#' @rdname colors
+#' @keywords datasets
+NULL
+
+
+
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Deep.Red <- "#590D21"
 
-#' Dark Red color
-#'
-#' This is a dark red color with the hex code #9F193D.
-#'
-#' \if{html}{\figure{Dark.Red.png}{options: width=10 alt="Dark Red color swatch"}}
-#' \if{latex}{\figure{Dark.Red.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Dark.Red <- "#9F193D"
 
-#' Red color
-#'
-#' This is a red color with the hex code #C31E4A.
-#'
-#' \if{html}{\figure{Red.png}{options: width=10 alt="Red color swatch"}}
-#' \if{latex}{\figure{Red.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Red <- "#C31E4A"
 
-#' Light Red color
-#'
-#' This is a light red color with the hex code #E66084.
-#'
-#' \if{html}{\figure{Light.Red.png}{options: width=10 alt="Light Red color swatch"}}
-#' \if{latex}{\figure{Light.Red.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
 #' @export
 Light.Red <- "#E66084"
 
-#' Pale Red color
-#'
-#' This is a pale red color with the hex code #F1A7BB.
-#'
-#' \if{html}{\figure{Pale.Red.png}{options: width=10 alt="Pale Red color swatch"}}
-#' \if{latex}{\figure{Pale.Red.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Pale.Red <- "#F1A7BB"
 
-#' Deep Orange color
-#'
-#' This is a deep orange color with the hex code #6F4B0B.
-#'
-#' \if{html}{\figure{Deep.Orange.png}{options: width=10 alt="Deep Orange color swatch"}}
-#' \if{latex}{\figure{Deep.Orange.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Deep.Orange <- "#6F4B0B"
 
-#' Dark Orange color
-#'
-#' This is a dark orange color with the hex code #A77011.
-#'
-#' \if{html}{\figure{Dark.Orange.png}{options: width=10 alt="Dark Orange color swatch"}}
-#' \if{latex}{\figure{Dark.Orange.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Dark.Orange <- "#A77011"
 
-#' Orange color
-#'
-#' This is an orange color with the hex code #E99F1F.
-#'
-#' \if{html}{\figure{Orange.png}{options: width=10 alt="Orange color swatch"}}
-#' \if{latex}{\figure{Orange.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Orange <- "#E99F1F"
 
-#' Light Orange color
-#'
-#' This is a light orange color with the hex code #F0BF6A.
-#'
-#' \if{html}{\figure{Light.Orange.png}{options: width=10 alt="Light Orange color swatch"}}
-#' \if{latex}{\figure{Light.Orange.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Light.Orange <- "#F0BF6A"
 
-#' Pale Orange color
-#'
-#' This is a pale orange color with the hex code #F4CF90.
-#'
-#' \if{html}{\figure{Pale.Orange.png}{options: width=10 alt="Pale Orange color swatch"}}
-#' \if{latex}{\figure{Pale.Orange.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Pale.Orange <- "#F4CF90"
 
-#' Deep Yellow color
-#'
-#' This is a deep yellow color with the hex code #9D7F06.
-#'
-#' \if{html}{\figure{Deep.Yellow.png}{options: width=10 alt="Deep Yellow color swatch"}}
-#' \if{latex}{\figure{Deep.Yellow.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Deep.Yellow <- "#9D7F06"
 
-#' Dark Yellow color
-#'
-#' This is a dark yellow color with the hex code #CEA708.
-#'
-#' \if{html}{\figure{Dark.Yellow.png}{options: width=10 alt="Dark Yellow color swatch"}}
-#' \if{latex}{\figure{Dark.Yellow.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Dark.Yellow <- "#CEA708"
 
-#' Yellow color
-#'
-#' This is a yellow color with the hex code #E8D206.
-#'
-#' \if{html}{\figure{Yellow.png}{options: width=10 alt="Yellow color swatch"}}
-#' \if{latex}{\figure{Yellow.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Yellow <- "#E8D206"
 
-#' Light Yellow color
-#'
-#' This is a light yellow color with the hex code #FFE373.
-#'
-#' \if{html}{\figure{Light.Yellow.png}{options: width=10 alt="Light Yellow color swatch"}}
-#' \if{latex}{\figure{Light.Yellow.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Light.Yellow <- "#FFE373"
 
-#' Pale Yellow color
-#'
-#' This is a pale yellow color with the hex code #FFF8DC.
-#'
-#' \if{html}{\figure{Pale.Yellow.png}{options: width=10 alt="Pale Yellow color swatch"}}
-#' \if{latex}{\figure{Pale.Yellow.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Pale.Yellow <- "#FFF8DC"
 
-#' Deep Green color
-#'
-#' This is a deep green color with the hex code #304011.
-#'
-#' \if{html}{\figure{Deep.Green.png}{options: width=10 alt="Deep Green color swatch"}}
-#' \if{latex}{\figure{Deep.Green.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Deep.Green <- "#304011"
 
-#' Dark Green color
-#'
-#' This is a dark green color with the hex code #54711E.
-#'
-#' \if{html}{\figure{Dark.Green.png}{options: width=10 alt="Dark Green color swatch"}}
-#' \if{latex}{\figure{Dark.Green.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Dark.Green <- "#54711E"
 
-#' Green color
-#'
-#' This is a green color with the hex code #83B02F.
-#'
-#' \if{html}{\figure{Green.png}{options: width=10 alt="Green color swatch"}}
-#' \if{latex}{\figure{Green.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Green <- "#83B02F"
 
-#' Light Green color
-#'
-#' This is a light green color with the hex code #ABD45E.
-#'
-#' \if{html}{\figure{Light.Green.png}{options: width=10 alt="Light Green color swatch"}}
-#' \if{latex}{\figure{Light.Green.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Light.Green <- "#ABD45E"
 
-#' Pale Green color
-#'
-#' This is a pale green color with the hex code #C4E18E.
-#'
-#' \if{html}{\figure{Pale.Green.png}{options: width=10 alt="Pale Green color swatch"}}
-#' \if{latex}{\figure{Pale.Green.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Pale.Green <- "#C4E18E"
 
-#' Deep Blue color
-#'
-#' This is a deep blue color with the hex code #002429.
-#'
-#' \if{html}{\figure{Deep.Blue.png}{options: width=10 alt="Deep Blue color swatch"}}
-#' \if{latex}{\figure{Deep.Blue.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Deep.Blue <- "#002429"
 
-#' Dark Blue color
-#'
-#' This is a dark blue color with the hex code #004852.
-#'
-#' \if{html}{\figure{Dark.Blue.png}{options: width=10 alt="Dark Blue color swatch"}}
-#' \if{latex}{\figure{Dark.Blue.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Dark.Blue <- "#004852"
 
-#' Blue color
-#'
-#' This is a blue color with the hex code #008C9E.
-#'
-#' \if{html}{\figure{Blue.png}{options: width=10 alt="Blue color swatch"}}
-#' \if{latex}{\figure{Blue.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Blue <- "#008C9E"
 
-#' Light Blue color
-#'
-#' This is a light blue color with the hex code #1FE5FF.
-#'
-#' \if{html}{\figure{Light.Blue.png}{options: width=10 alt="Light Blue color swatch"}}
-#' \if{latex}{\figure{Light.Blue.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Light.Blue <- "#1FE5FF"
 
-#' Pale Blue color
-#'
-#' This is a pale blue color with the hex code #85F1FF.
-#'
-#' \if{html}{\figure{Pale.Blue.png}{options: width=10 alt="Pale Blue color swatch"}}
-#' \if{latex}{\figure{Pale.Blue.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Pale.Blue <- "#85F1FF"
 
-#' Deep Purple color
-#'
-#' This is a deep purple color with the hex code #271041.
-#'
-#' \if{html}{\figure{Deep.Purple.png}{options: width=10 alt="Deep Purple color swatch"}}
-#' \if{latex}{\figure{Deep.Purple.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Deep.Purple <- "#271041"
 
-#' Dark Purple color
-#'
-#' This is a dark purple color with the hex code #4E2183.
-#'
-#' \if{html}{\figure{Dark.Purple.png}{options: width=10 alt="Dark Purple color swatch"}}
-#' \if{latex}{\figure{Dark.Purple.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Dark.Purple <- "#4E2183"
 
-#' Purple color
-#'
-#' This is a purple color with the hex code #743496.
-#'
-#' \if{html}{\figure{Purple.png}{options: width=10 alt="Purple color swatch"}}
-#' \if{latex}{\figure{Purple.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Purple <- "#743496"
 
-#' Light Purple color
-#'
-#' This is a light purple color with the hex code #A06CDA.
-#'
-#' \if{html}{\figure{Light.Purple.png}{options: width=10 alt="Light Purple color swatch"}}
-#' \if{latex}{\figure{Light.Purple.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Light.Purple <- "#A06CDA"
 
-#' Pale Purple color
-#'
-#' This is a pale purple color with the hex code #CAADEB.
-#'
-#' \if{html}{\figure{Pale.Purple.png}{options: width=10 alt="Pale Purple color swatch"}}
-#' \if{latex}{\figure{Pale.Purple.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Pale.Purple <- "#CAADEB"
 
-#' Deep Grey color
-#'
-#' This is a deep grey color with the hex code #151315.
-#'
-#' \if{html}{\figure{Deep.Grey.png}{options: width=10 alt="Deep Grey color swatch"}}
-#' \if{latex}{\figure{Deep.Grey.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Deep.Grey <- "#151315"
 
-#' Dark Grey color
-#'
-#' This is a dark grey color with the hex code #403A3F.
-#'
-#' \if{html}{\figure{Dark.Grey.png}{options: width=10 alt="Dark Grey color swatch"}}
-#' \if{latex}{\figure{Dark.Grey.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Dark.Grey <- "#403A3F"
 
-#' Grey color
-#'
-#' This is a grey color with the hex code #6F646C.
-#'
-#' \if{html}{\figure{Grey.png}{options: width=10 alt="Grey color swatch"}}
-#' \if{latex}{\figure{Grey.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Grey <- "#6F646C"
 
-#' Light Grey color
-#'
-#' This is a light grey color with the hex code #9E949B.
-#'
-#' \if{html}{\figure{Light.Grey.png}{options: width=10 alt="Light Grey color swatch"}}
-#' \if{latex}{\figure{Light.Grey.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Light.Grey <- "#9E949B"
 
-#' Pale Grey color
-#'
-#' This is a pale grey color with the hex code #CFC9CD.
-#'
-#' \if{html}{\figure{Pale.Grey.png}{options: width=10 alt="Pale Grey color swatch"}}
-#' \if{latex}{\figure{Pale.Grey.png}{options: width=0.5in}}
-#'
+#' @rdname colors
+#' @usage NULL
+#' @format NULL
 #' @export
 Pale.Grey <- "#CFC9CD"
 
+
 #' List of all colors
+#' @rdname colors
 #' @export
 color.list <- list(
   Deep.Red = Deep.Red,
