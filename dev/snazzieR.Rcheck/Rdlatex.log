@@ -16,9 +16,9 @@ For additional information on amsmath, use the `?' option.
 Writing index file Rd2.idx
 (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
 No file Rd2.aux.
-(/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+(/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd)
 No file Rd2.toc.
-(/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
 [1{/home/shared-psychosis/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/shared-psychosis/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 Underfull \vbox (badness 5446) has occurred while \output is active
 [2]
@@ -27,11 +27,11 @@ Underfull \vbox (badness 5446) has occurred while \output is active
 [5]
 [6] (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 [7]
-Overfull \hbox (5.5292pt too wide) in paragraph at lines 390--392
+Overfull \hbox (5.5292pt too wide) in paragraph at lines 392--394
 []\T1/ptm/m/n/10 After com-po-nent ex-trac-tion, the fi-nal re-gres-sion co-ef-fi-cient ma-trix $\OML/cmm/m/it/10 B[]$ \T1/ptm/m/n/10 is com-puted and rescaled
 
 [8]
-Overfull \hbox (54.78088pt too wide) in paragraph at lines 442--442
+Overfull \hbox (54.78088pt too wide) in paragraph at lines 444--444
  []\T1/pcr/m/n/10 pls.regression(x, y, n.components = NULL, calc.method = c("SVD", "NIPALS")) 
 
 [9]
@@ -39,7 +39,7 @@ Overfull \hbox (54.78088pt too wide) in paragraph at lines 442--442
 [11]
 No file Rd2.ind.
 
-[12] (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.aux)
+[12] (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.aux)
 
 Package rerunfilecheck Warning: File `Rd2.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -47,7 +47,7 @@ Package rerunfilecheck Warning: File `Rd2.out' has changed.
 
  )
 (see the transcript file for additional information)</home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (12 pages, 217438 bytes).
+Output written on Rd2.pdf (12 pages, 218098 bytes).
 Transcript written on Rd2.log.
 This is makeindex, version 2.17 [TeX Live 2026/dev] (kpathsea + Thai support).
 Scanning input file Rd2.idx....done (57 entries accepted, 0 rejected).
@@ -67,7 +67,7 @@ Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
 For additional information on amsmath, use the `?' option.
 (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/eucal.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/times.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/base/makeidx.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
 Writing index file Rd2.idx
-(/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.aux) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.out) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.out) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.toc (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd))
+(/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.aux) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.out) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.out) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.toc)
 [1{/home/shared-psychosis/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/shared-psychosis/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 [2]
 [3 </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/color.ref.png (PNG copy)>]
@@ -75,19 +75,19 @@ Writing index file Rd2.idx
 [5]
 [6] (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 [7]
-Overfull \hbox (5.5292pt too wide) in paragraph at lines 390--392
+Overfull \hbox (5.5292pt too wide) in paragraph at lines 392--394
 []\T1/ptm/m/n/10 After com-po-nent ex-trac-tion, the fi-nal re-gres-sion co-ef-fi-cient ma-trix $\OML/cmm/m/it/10 B[]$ \T1/ptm/m/n/10 is com-puted and rescaled
 
 [8]
-Overfull \hbox (54.78088pt too wide) in paragraph at lines 442--442
+Overfull \hbox (54.78088pt too wide) in paragraph at lines 444--444
  []\T1/pcr/m/n/10 pls.regression(x, y, n.components = NULL, calc.method = c("SVD", "NIPALS")) 
 
 [9]
 [10]
-[11] (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.ind
+[11] (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.ind
 [12]
 
-[13]) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.aux)
+[13]) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.aux)
 
 Package rerunfilecheck Warning: File `Rd2.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -95,7 +95,7 @@ Package rerunfilecheck Warning: File `Rd2.out' has changed.
 
  )
 (see the transcript file for additional information)</home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (13 pages, 228313 bytes).
+Output written on Rd2.pdf (13 pages, 228688 bytes).
 Transcript written on Rd2.log.
 This is makeindex, version 2.17 [TeX Live 2026/dev] (kpathsea + Thai support).
 Scanning input file Rd2.idx....done (57 entries accepted, 0 rejected).
@@ -115,30 +115,30 @@ Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
 For additional information on amsmath, use the `?' option.
 (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/eucal.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/times.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/base/makeidx.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
 Writing index file Rd2.idx
-(/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.aux) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.out) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.out) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.toc (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd))
-[1{/home/shared-psychosis/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/shared-psychosis/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+(/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.aux) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.out) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.out) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.toc
+[1{/home/shared-psychosis/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/shared-psychosis/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}])
 [2]
 [3 </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/color.ref.png (PNG copy)>]
 [4 </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Deep.Red.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Deep.Green.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Deep.Grey.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Dark.Red.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Dark.Green.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Dark.Grey.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Red.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Green.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Grey.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Light.Red.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Light.Green.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Light.Grey.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Pale.Red.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Pale.Green.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Pale.Grey.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Deep.Orange.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Deep.Blue.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Dark.Orange.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Dark.Blue.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Orange.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Blue.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Light.Orange.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Light.Blue.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Pale.Orange.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Pale.Blue.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Deep.Yellow.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Deep.Purple.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Dark.Yellow.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Dark.Purple.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Yellow.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Purple.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Light.Yellow.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Light.Purple.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Pale.Yellow.png> </home/shared-psychosis/Landing Zone/snazzieR/dev/snazzieR.Rcheck/snazzieR/help/figures/Pale.Purple.png>] (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/ts1pcr.fd)
 [5]
 [6] (/home/shared-psychosis/.TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 [7]
-Overfull \hbox (5.5292pt too wide) in paragraph at lines 390--392
+Overfull \hbox (5.5292pt too wide) in paragraph at lines 392--394
 []\T1/ptm/m/n/10 After com-po-nent ex-trac-tion, the fi-nal re-gres-sion co-ef-fi-cient ma-trix $\OML/cmm/m/it/10 B[]$ \T1/ptm/m/n/10 is com-puted and rescaled
 
 [8]
-Overfull \hbox (54.78088pt too wide) in paragraph at lines 442--442
+Overfull \hbox (54.78088pt too wide) in paragraph at lines 444--444
  []\T1/pcr/m/n/10 pls.regression(x, y, n.components = NULL, calc.method = c("SVD", "NIPALS")) 
 
 [9]
 [10]
-[11] (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.ind
+[11] (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.ind
 [12]
 
-[13]) (/tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3/Rd2.aux) )
+[13]) (/tmp/RtmphMAIpn/Rd2pdf158de7a388f61/Rd2.aux) )
 (see the transcript file for additional information)</home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/shared-psychosis/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (13 pages, 228705 bytes).
+Output written on Rd2.pdf (13 pages, 229248 bytes).
 Transcript written on Rd2.log.
 Saving output to ‘snazzieR-manual.pdf’ ...
 Done
-You may want to clean up by 'rm -Rf /tmp/RtmpKLEQsV/Rd2pdf7a1a3b7d30a3'
+You may want to clean up by 'rm -Rf /tmp/RtmphMAIpn/Rd2pdf158de7a388f61'

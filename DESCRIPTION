@@ -8,9 +8,11 @@ Authors@R: person(given = c("Aidan", "J."),
                   role = c("aut", "cre"))
 Maintainer: Aidan J. Wagner <JesusButForGayPeople@proton.me>
 Description: Because your linear models deserve better than console output.
-    A sleek color palette and kable styling to make your regression results look sharper than they are.
-    Includes support for Partial Least Squares (PLS) regression via both the SVD and NIPALS algorithms,
-    along with a unified interface for model fitting and fabulous LaTeX and console output formatting.
+  A sleek color palette and kable styling to make your regression results look sharper than they are.
+  Includes support for Partial Least Squares (PLS) regression via both the SVD and NIPALS algorithms,
+  along with a unified interface for model fitting and fabulous LaTeX and console output formatting.
+  See the package manual at 
+  <https://github.com/JesusButForGayPeople/snazzieR/releases/download/v0.1.1/snazzieR_0.1.1.pdf>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -24,5 +26,8 @@ RoxygenNote: 7.3.2
 Depends: 
     R (>= 3.5)
 Suggests: 
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+VignetteBuilder: knitr
+URL: https://jesusbutforgaypeople.github.io/snazzieR/

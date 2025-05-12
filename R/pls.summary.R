@@ -1,4 +1,5 @@
 #' @title Format PLS Model Output as LaTeX or Console Tables
+#'
 #' @description
 #' Formats and displays Partial Least Squares (PLS) model output from \code{pls.regression()}
 #' as either LaTeX tables (for PDF rendering) or console-friendly output.
@@ -8,15 +9,30 @@
 #' @param include.scores Logical. Whether to include score matrices (T and U). Default is \code{TRUE}.
 #' @param latex Logical. If \code{TRUE}, produces LaTeX output (for PDF rendering). If \code{FALSE}, prints to console. Default is \code{FALSE}.
 #'
-#' @return When \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code). When \code{FALSE}, prints formatted tables to console.
+#' @return When \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code).
+#'         When \code{latex = FALSE}, prints formatted tables to the console and returns \code{NULL}.
 #'
-#' @method format pls
 #' @export
-format.pls <- function(x, ..., include.scores = TRUE, latex = FALSE) {
+#'
+#' @examples
+#' # Load example data
+#' data(mtcars)
+#'
+#' # Prepare data for PLS regression
+#' X <- mtcars[, c("wt", "hp", "disp")]
+#' Y <- mtcars[, "mpg", drop = FALSE]
+#'
+#' # Fit PLS model with 2 components
+#' pls.fit <- pls.regression(X, Y, n.components = 2)
+#'
+#' # Print a console-formatted summary
+#' pls.summary(pls.fit, latex = FALSE)
+
+pls.summary <- function(x, ..., include.scores = TRUE, latex = TRUE) {
   pls.result <- x  # optional: alias for clarity
 
   if (is.null(pls.result$model.type) || pls.result$model.type != "PLS Regression") {
-    stop("Error! Non-PLS model passed to PLS formatting function (format.pls.R)", call. = FALSE)
+    stop("Error! Non-PLS model passed to PLS formatting function (pls.summary.R)", call. = FALSE)
   }
 
   `%>%` <- dplyr::`%>%`

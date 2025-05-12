@@ -790,4 +790,4 @@ Table: Variance Explained by Components (Y)
 > 
 > proc.time()
    user  system elapsed 
-  0.573   0.055   0.626 
+  0.575   0.040   0.611 

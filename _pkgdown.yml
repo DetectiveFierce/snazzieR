@@ -1,0 +1,73 @@
+url: https://jesusbutforgaypeople.github.io/snazzieR/
+
+pandoc: '3.2'
+pkgdown: 2.1.2
+pkgdown_sha: null
+
+home:
+  title: "snazzieR"
+  path: index.html  # Tells pkgdown to look for index.Rmd and render it
+  includes:
+    after_body: docs/_includes/home.html
+
+reference:
+  - title: "PLS Functions"
+    desc: "Functions for Partial Least Squares regression"
+    contents:
+      - pls.regression
+      - NIPALS.pls
+      - SVD.pls
+      - pls.summary
+  - title: "Formatting Functions"
+    desc: "Functions for formatting and displaying results"
+    contents:
+      - model.summary.table
+      - ANOVA.summary.table
+      - eigen.summary
+      - model.equation
+  - title: "Theme Functions"
+    desc: "Functions for customizing the appearance"
+    contents:
+      - snazzieR.theme
+      - colors
+      - color.ref
+
+articles:
+  - title: "Partial Least Squares (PLS) Regression"
+    contents:
+      - pls-overview
+      - pls-nipals
+      - pls-svd
+
+navbar:
+  title: "snazzieR"
+  type: default
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Reference"
+      href: reference/index.html
+    - text: "Articles"
+      menu:
+        - text: "PLS Overview"
+          href: articles/pls-overview.html
+        - text: "NIPALS Algorithm"
+          href: articles/pls-nipals.html
+        - text: "SVD Algorithm"
+          href: articles/pls-svd.html
+
+template:
+  bootstrap: 5
+  bootswatch: flatly
+  includes:
+    in_header: custom.css
+  params:
+    navbar:
+      type: default
+      bg: light
+      fixed: false
+      container: true
+      container_class: container
+      class: navbar-light
+
+last_built: 2025-05-11T23:14Z
