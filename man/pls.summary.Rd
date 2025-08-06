@@ -4,7 +4,7 @@
 \alias{pls.summary}
 \title{Format PLS Model Output as LaTeX or Console Tables}
 \usage{
-pls.summary(x, ..., include.scores = TRUE, latex = TRUE)
+pls.summary(x, ..., include.scores = TRUE)
 }
 \arguments{
 \item{x}{A list returned by \code{\link{pls.regression}()} (class \code{"pls"}) containing PLS model components.}
@@ -12,8 +12,6 @@ pls.summary(x, ..., include.scores = TRUE, latex = TRUE)
 \item{...}{Further arguments passed to or from methods (unused).}
 
 \item{include.scores}{Logical. Whether to include score matrices (T and U). Default is \code{TRUE}.}
-
-\item{latex}{Logical. If \code{TRUE}, produces LaTeX output (for PDF rendering). If \code{FALSE}, prints to console. Default is \code{FALSE}.}
 }
 \value{
 When \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code).

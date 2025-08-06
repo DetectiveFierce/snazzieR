@@ -58,26 +58,26 @@ Each color is available as an exported object (e.g., \code{Red}, \code{Dark.Red}
 \if{html}{
 \tabular{lllclll}{
   \strong{Name} \tab \strong{Hex} \tab \strong{Swatch} \tab \tab \strong{Name} \tab \strong{Hex} \tab \strong{Swatch} \cr
-  Deep.Red \tab \code{#590D21} \tab \figure{Deep.Red.png}{options: width=30px} \tab \tab  Deep.Green \tab \code{#304011} \tab \figure{Deep.Green.png}{options: width=30px} \cr
-  Dark.Red \tab \code{#9F193D} \tab \figure{Dark.Red.png}{options: width=30px} \tab \tab  Dark.Green \tab \code{#54711E} \tab \figure{Dark.Green.png}{options: width=30px} \cr
-  Red \tab \code{#C31E4A} \tab \figure{Red.png}{options: width=30px} \tab \tab Green \tab \code{#83B02F} \tab \figure{Green.png}{options: width=30px}  \cr
-  Light.Red \tab \code{#E66084} \tab \figure{Light.Red.png}{options: width=30px} \tab \tab Light.Green \tab \code{#ABD45E} \tab \figure{Light.Green.png}{options: width=30px}  \cr
-  Pale.Red \tab \code{#F1A7BB} \tab \figure{Pale.Red.png}{options: width=30px} \tab \tab Pale.Green \tab \code{#C4E18E} \tab \figure{Pale.Green.png}{options: width=30px} \cr
-  Deep.Orange \tab \code{#6F4B0B} \tab \figure{Deep.Orange.png}{options: width=30px} \tab \tab Deep.Blue \tab \code{#002429} \tab \figure{Deep.Blue.png}{options: width=30px} \cr
-  Dark.Orange \tab \code{#A77011} \tab \figure{Dark.Orange.png}{options: width=30px} \tab \tab Dark.Blue \tab \code{#004852} \tab \figure{Dark.Blue.png}{options: width=30px}  \cr
-  Orange \tab \code{#E99F1F} \tab \figure{Orange.png}{options: width=30px} \tab \tab Blue \tab \code{#008C9E} \tab \figure{Blue.png}{options: width=30px}\cr
-  Light.Orange \tab \code{#F0BF6A} \tab \figure{Light.Orange.png}{options: width=30px} \tab \tab  Light.Blue \tab \code{#1FE5FF} \tab \figure{Light.Blue.png}{options: width=30px} \cr
-  Pale.Orange \tab \code{#F4CF90} \tab \figure{Pale.Orange.png}{options: width=30px} \tab \tab Pale.Blue \tab \code{#85F1FF} \tab \figure{Pale.Blue.png}{options: width=30px} \cr
-  Deep.Yellow \tab \code{#9D7F06} \tab \figure{Deep.Yellow.png}{options: width=30px} \tab \tab Deep.Purple \tab \code{#271041} \tab \figure{Deep.Purple.png}{options: width=30px} \cr
-  Dark.Yellow \tab \code{#CEA708} \tab \figure{Dark.Yellow.png}{options: width=30px} \tab \tab Dark.Purple \tab \code{#4E2183} \tab \figure{Dark.Purple.png}{options: width=30px}  \cr
-  Yellow \tab \code{#E8D206} \tab \figure{Yellow.png}{options: width=30px} \tab \tab Purple \tab \code{#743496} \tab \figure{Purple.png}{options: width=30px} \cr
-  Light.Yellow \tab \code{#FFE373} \tab \figure{Light.Yellow.png}{options: width=30px} \tab \tab  Light.Purple \tab \code{#A06CDA} \tab \figure{Light.Purple.png}{options: width=30px} \cr
-  Pale.Yellow \tab \code{#FFF8DC} \tab \figure{Pale.Yellow.png}{options: width=30px} \tab \tab Pale.Purple \tab \code{#CAADEB} \tab \figure{Pale.Purple.png}{options: width=30px} \cr
-  Deep.Grey \tab \code{#151315} \tab \figure{Deep.Grey.png}{options: width=30px} \tab \tab \tab \tab\cr
-  Dark.Grey \tab \code{#403A3F} \tab \figure{Dark.Grey.png}{options: width=30px} \tab \tab \tab \tab\cr
-  Grey \tab \code{#6F646C} \tab \figure{Grey.png}{options: width=30px} \tab \tab \tab \tab \cr
-  Light.Grey \tab \code{#9E949B} \tab \figure{Light.Grey.png}{options: width=30px} \tab \tab \tab \tab \cr
-  Pale.Grey \tab \code{#CFC9CD} \tab \figure{Pale.Grey.png}{options: width=30px} \tab \tab \tab \tab
+  Deep.Red \tab \code{#590D21} \tab \figure{Deep.Red.png}{options: width="30px"} \tab \tab  Deep.Green \tab \code{#304011} \tab \figure{Deep.Green.png}{options: width="30px"} \cr
+  Dark.Red \tab \code{#9F193D} \tab \figure{Dark.Red.png}{options: width="30px"} \tab \tab  Dark.Green \tab \code{#54711E} \tab \figure{Dark.Green.png}{options: width="30px"} \cr
+  Red \tab \code{#C31E4A} \tab \figure{Red.png}{options: width="30px"} \tab \tab Green \tab \code{#83B02F} \tab \figure{Green.png}{options: width="30px"}  \cr
+  Light.Red \tab \code{#E66084} \tab \figure{Light.Red.png}{options: width="30px"} \tab \tab Light.Green \tab \code{#ABD45E} \tab \figure{Light.Green.png}{options: width="30px"}  \cr
+  Pale.Red \tab \code{#F1A7BB} \tab \figure{Pale.Red.png}{options: width="30px"} \tab \tab Pale.Green \tab \code{#C4E18E} \tab \figure{Pale.Green.png}{options: width="30px"} \cr
+  Deep.Orange \tab \code{#6F4B0B} \tab \figure{Deep.Orange.png}{options: width="30px"} \tab \tab Deep.Blue \tab \code{#002429} \tab \figure{Deep.Blue.png}{options: width="30px"} \cr
+  Dark.Orange \tab \code{#A77011} \tab \figure{Dark.Orange.png}{options: width="30px"} \tab \tab Dark.Blue \tab \code{#004852} \tab \figure{Dark.Blue.png}{options: width="30px"}  \cr
+  Orange \tab \code{#E99F1F} \tab \figure{Orange.png}{options: width="30px"} \tab \tab Blue \tab \code{#008C9E} \tab \figure{Blue.png}{options: width="30px"}\cr
+  Light.Orange \tab \code{#F0BF6A} \tab \figure{Light.Orange.png}{options: width="30px"} \tab \tab  Light.Blue \tab \code{#1FE5FF} \tab \figure{Light.Blue.png}{options: width="30px"} \cr
+  Pale.Orange \tab \code{#F4CF90} \tab \figure{Pale.Orange.png}{options: width="30px"} \tab \tab Pale.Blue \tab \code{#85F1FF} \tab \figure{Pale.Blue.png}{options: width="30px"} \cr
+  Deep.Yellow \tab \code{#9D7F06} \tab \figure{Deep.Yellow.png}{options: width="30px"} \tab \tab Deep.Purple \tab \code{#271041} \tab \figure{Deep.Purple.png}{options: width="30px"} \cr
+  Dark.Yellow \tab \code{#CEA708} \tab \figure{Dark.Yellow.png}{options: width="30px"} \tab \tab Dark.Purple \tab \code{#4E2183} \tab \figure{Dark.Purple.png}{options: width="30px"}  \cr
+  Yellow \tab \code{#E8D206} \tab \figure{Yellow.png}{options: width="30px"} \tab \tab Purple \tab \code{#743496} \tab \figure{Purple.png}{options: width="30px"} \cr
+  Light.Yellow \tab \code{#FFE373} \tab \figure{Light.Yellow.png}{options: width="30px"} \tab \tab  Light.Purple \tab \code{#A06CDA} \tab \figure{Light.Purple.png}{options: width="30px"} \cr
+  Pale.Yellow \tab \code{#FFF8DC} \tab \figure{Pale.Yellow.png}{options: width="30px"} \tab \tab Pale.Purple \tab \code{#CAADEB} \tab \figure{Pale.Purple.png}{options: width="30px"} \cr
+  Deep.Grey \tab \code{#151315} \tab \figure{Deep.Grey.png}{options: width="30px"} \tab \tab \tab \tab\cr
+  Dark.Grey \tab \code{#403A3F} \tab \figure{Dark.Grey.png}{options: width="30px"} \tab \tab \tab \tab\cr
+  Grey \tab \code{#6F646C} \tab \figure{Grey.png}{options: width="30px"} \tab \tab \tab \tab \cr
+  Light.Grey \tab \code{#9E949B} \tab \figure{Light.Grey.png}{options: width="30px"} \tab \tab \tab \tab \cr
+  Pale.Grey \tab \code{#CFC9CD} \tab \figure{Pale.Grey.png}{options: width="30px"} \tab \tab \tab \tab
 }
 }
 \if{latex}{

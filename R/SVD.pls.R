@@ -91,11 +91,11 @@ SVD.pls <- function(x, y, n.components = NULL) {
   }
 
   # Preallocate matrices
-  T <- matrix(0, n, n.components)  # X scores
-  U <- matrix(0, n, n.components)  # Y scores
-  P_loadings <- matrix(0, p, n.components)  # X loadings
-  W <- matrix(0, p, n.components)  # X weights
-  Q_loadings <- matrix(0, q, n.components)  # Y loadings (reference)
+  T <- matrix(0, n, n.components) # X scores
+  U <- matrix(0, n, n.components) # Y scores
+  P_loadings <- matrix(0, p, n.components) # X loadings
+  W <- matrix(0, p, n.components) # X weights
+  Q_loadings <- matrix(0, q, n.components) # Y loadings (reference)
   B_vector <- numeric(n.components)
 
   # Initial total sum of squares
@@ -120,7 +120,7 @@ SVD.pls <- function(x, y, n.components = NULL) {
 
     # Step 3: Scores
     t <- E %*% w
-    t <- t / sqrt(sum(t^2))  # normalize t
+    t <- t / sqrt(sum(t^2)) # normalize t
     u <- F %*% c
 
     # Step 4: Loadings
@@ -188,12 +188,12 @@ SVD.pls <- function(x, y, n.components = NULL) {
 
   list(
     model.type = "PLS Regression",
-    T = T,  # X scores
-    U = U,  # Y scores
-    W = W,  # X weights
-    C = C,  # Y weights (normalized)
-    P_loadings = P_loadings,  # X loadings (reference)
-    Q_loadings = Q_loadings,  # Y loadings (reference)
+    T = T, # X scores
+    U = U, # Y scores
+    W = W, # X weights
+    C = C, # Y weights (normalized)
+    P_loadings = P_loadings, # X loadings (reference)
+    Q_loadings = Q_loadings, # Y loadings (reference)
     B_vector = B_vector,
     coefficients = B_original,
     intercept = intercept,

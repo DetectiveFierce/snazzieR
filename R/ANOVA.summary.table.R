@@ -22,7 +22,6 @@
 #' # Generate a plain-text ANOVA summary table
 #' ANOVA.summary.table(model, caption = "ANOVA Summary", latex = FALSE)
 #'
-
 ANOVA.summary.table <- function(model, caption, latex = TRUE) {
   # Compute ANOVA summary
   anova.summary <- anova(model)
@@ -43,9 +42,12 @@ ANOVA.summary.table <- function(model, caption, latex = TRUE) {
 
   # Add significance codes
   anova.table$Signif. <- ifelse(anova.table$P.Value < 0.001, ":3",
-                                ifelse(anova.table$P.Value < 0.01, ":)",
-                                       ifelse(anova.table$P.Value < 0.05, ":/",
-                                              ifelse(anova.table$P.Value < 0.1, "", ""))))
+    ifelse(anova.table$P.Value < 0.01, ":)",
+      ifelse(anova.table$P.Value < 0.05, ":/",
+        ifelse(anova.table$P.Value < 0.1, "", "")
+      )
+    )
+  )
 
   if (latex) {
     return(

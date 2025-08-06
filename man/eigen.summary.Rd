@@ -4,19 +4,13 @@
 \alias{eigen.summary}
 \title{Summarize Eigenvalues and Eigenvectors of a Covariance Matrix}
 \usage{
-eigen.summary(
-  cov.matrix,
-  caption = "Eigenvectors of Covariance Matrix",
-  space_after_caption = "5mm",
-  latex = TRUE
-)
+eigen.summary(cov.matrix, caption = "Eigenvectors of Covariance Matrix",
+  latex = TRUE)
 }
 \arguments{
 \item{cov.matrix}{A square numeric matrix representing the covariance matrix.}
 
 \item{caption}{A character string specifying the table caption (default: "Eigenvectors of Covariance Matrix").}
-
-\item{space_after_caption}{A character string specifying the space after the caption in LaTeX (default: "5mm").}
 
 \item{latex}{A logical indicating whether to output LaTeX table (default: TRUE). If FALSE, prints as plain text.}
 }
@@ -30,5 +24,5 @@ plaintext summary displaying the results.
 }
 \examples{
 cov_matrix <- matrix(c(4, 2, 2, 3), nrow = 2)
-eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvectors of Covariance Matrix", latex = FALSE)
+eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvectors", latex = FALSE)
 }

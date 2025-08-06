@@ -25,9 +25,6 @@
 #' # Print a plain-text version to the console
 #' model.summary.table(model, caption = "Linear Model Summary", latex = FALSE)
 #'
-#'
-
-
 model.summary.table <- function(model, caption, latex = TRUE) {
   # Extract coefficient summary
   coef.summary <- summary(model)$coefficients
@@ -44,8 +41,10 @@ model.summary.table <- function(model, caption, latex = TRUE) {
 
   # Add significance codes
   coef.table$Signif. <- ifelse(coef.table$P.Value < 0.001, ":3",
-                               ifelse(coef.table$P.Value < 0.01, ":)",
-                                      ifelse(coef.table$P.Value < 0.05, ":/", "")))
+    ifelse(coef.table$P.Value < 0.01, ":)",
+      ifelse(coef.table$P.Value < 0.05, ":/", "")
+    )
+  )
 
   # Calculate model statistics
   mse <- mean(model.summary$residuals^2)
@@ -69,11 +68,13 @@ model.summary.table <- function(model, caption, latex = TRUE) {
   # Create model statistics table
   model.stats.table <- data.frame(
     Statistic = c("MSE", "MSE adj.", "df", "R-squared", "R-squared adj."),
-    Value = c(round(mse, rounding.precision),
-              round(mse.adj, rounding.precision),
-              df,
-              round(r.squared, rounding.precision),
-              round(adj.r.squared, rounding.precision))
+    Value = c(
+      round(mse, rounding.precision),
+      round(mse.adj, rounding.precision),
+      df,
+      round(r.squared, rounding.precision),
+      round(adj.r.squared, rounding.precision)
+    )
   )
 
   # Align rows
@@ -97,21 +98,25 @@ model.summary.table <- function(model, caption, latex = TRUE) {
 
   if (latex) {
     final_table[, ] |>
-      kableExtra::kable(format = "latex",
-                        caption = paste("\\textbf{", caption, "} \\newline \\textbf{", equation, "}"),
-                        digits = rounding.precision,
-                        row.names = FALSE) |>
+      kableExtra::kable(
+        format = "latex",
+        caption = paste("\\textbf{", caption, "} \\newline \\textbf{", equation, "}"),
+        digits = rounding.precision,
+        row.names = FALSE
+      ) |>
       kableExtra::row_spec(0, bold = TRUE) |>
       kableExtra::column_spec(1, border_left = TRUE, border_right = FALSE, bold = TRUE) |>
       kableExtra::column_spec(6, border_left = TRUE, border_right = FALSE, bold = TRUE) |>
       kableExtra::column_spec(7, border_left = FALSE, border_right = TRUE) |>
       kableExtra::footnote(
-        general = c("", "", "", "", "significance codes -  :3 -  >0.001 ", ":) - >0.01", ":/ - >0.05 ", ""),
+        general = c("", "", "", "significance codes -  :3 -  >0.001 ", ":) - >0.01", ":/ - >0.05 ", ""),
         general_title = "",
         footnote_as_chunk = TRUE,
         threeparttable = TRUE
       ) |>
-      kableExtra::kable_styling(latex_options = "HOLD_position")
+      kableExtra::kable_styling(
+        latex_options = c("HOLD_position", "scale_down"),
+      )
   } else {
     cat(paste0("== ", caption, " ==\n"))
     cat(paste0("Equation: ", equation, "\n\n"))

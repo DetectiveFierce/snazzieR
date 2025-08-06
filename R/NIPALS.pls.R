@@ -99,11 +99,11 @@ NIPALS.pls <- function(x, y, n.components = NULL) {
   q <- ncol(F)
 
   # Preallocate matrices
-  T <- matrix(0, n, n.components)  # X scores
-  U <- matrix(0, n, n.components)  # Y scores
-  P_loadings <- matrix(0, p, n.components)  # X loadings
-  W <- matrix(0, p, n.components)  # X weights
-  Q_loadings <- matrix(0, q, n.components)  # Y loadings
+  T <- matrix(0, n, n.components) # X scores
+  U <- matrix(0, n, n.components) # Y scores
+  P_loadings <- matrix(0, p, n.components) # X loadings
+  W <- matrix(0, p, n.components) # X weights
+  Q_loadings <- matrix(0, q, n.components) # Y loadings
   B_vector <- numeric(n.components)
 
   # Initial sum of squares for explained variance tracking
@@ -114,7 +114,7 @@ NIPALS.pls <- function(x, y, n.components = NULL) {
   Y_explained <- numeric(n.components)
 
   for (h in seq_len(n.components)) {
-    set.seed(h)  # For reproducibility
+    set.seed(h) # For reproducibility
     u <- rnorm(n)
     t.old <- rep(0, n)
 
@@ -158,8 +158,8 @@ NIPALS.pls <- function(x, y, n.components = NULL) {
     F <- F - b * t %*% t(c)
 
     # Store results
-    T[, h] <- t  # X scores
-    U[, h] <- u  # Y scores
+    T[, h] <- t # X scores
+    U[, h] <- u # Y scores
     P_loadings[, h] <- p
     W[, h] <- w
     Q_loadings[, h] <- c
@@ -194,12 +194,12 @@ NIPALS.pls <- function(x, y, n.components = NULL) {
 
   list(
     model.type = "PLS Regression",
-    T = T,  # X scores
-    U = U,  # Y scores
-    W = W,  # X weights
-    C = C,  # Y weights (normalized)
-    P_loadings = P_loadings,  # X loadings (reference)
-    Q_loadings = Q_loadings,  # Y loadings (reference)
+    T = T, # X scores
+    U = U, # Y scores
+    W = W, # X weights
+    C = C, # Y weights (normalized)
+    P_loadings = P_loadings, # X loadings (reference)
+    Q_loadings = Q_loadings, # Y loadings (reference)
     B_vector = B_vector,
     coefficients = B_original,
     intercept = intercept,

@@ -1,0 +1,146 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+\usepackage{geometry}
+\geometry{margin=0.5in, paperwidth=8in, paperheight=10in}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{graphicx}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{minipage}[t]{0.48\linewidth}
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-8}X Weights (W)}
+\centering
+\begin{tabular}[t]{|>{}c>{}c|}
+\toprule
+Comp 1 & Comp 2\\
+\midrule
+-0.9046320 & 0.4261936\\
+0.4261936 & 0.9046320\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{minipage}\begin{minipage}[t]{0.48\linewidth}
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-8}Y Weights (C)}
+\centering
+\begin{tabular}[t]{|>{}c>{}c|}
+\toprule
+Comp 1 & Comp 2\\
+\midrule
+-0.7350032 & 0.5400163\\
+-0.6780636 & 0.8416546\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{minipage}
+
+\begin{minipage}[t]{0.48\linewidth}
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-8}X Loadings (P)}
+\centering
+\begin{tabular}[t]{|>{}c>{}c|}
+\toprule
+Comp 1 & Comp 2\\
+\midrule
+-11.159218 & 4.946903\\
+6.224581 & 10.500219\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{minipage}\begin{minipage}[t]{0.48\linewidth}
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-8}Y Loadings (Q)}
+\centering
+\begin{tabular}[t]{|>{}c>{}c|}
+\toprule
+Comp 1 & Comp 2\\
+\midrule
+-0.7350032 & 0.5400163\\
+-0.6780636 & 0.8416546\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{minipage}
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-8}Regression Scalars (b)}
+\centering
+\begin{tabular}[t]{|>{}c>{}c|}
+\toprule
+Component & Estimate\\
+\midrule
+1 & 15.444539\\
+2 & 1.203207\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-8}Regression Coefficients (Original Scale)}
+\centering
+\begin{tabular}[t]{|>{}lc>{}c|}
+\toprule
+  & Petal.Length & Petal.Width\\
+\midrule
+Sepal.Length & 1.775592 & 0.7232920\\
+Sepal.Width & -1.338623 & -0.4787213\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-8}Variance Explained by Components (X)}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{|>{\centering\arraybackslash}p{3cm}c>{}c|}
+\toprule
+Latent Vector & Explained Variance & Cumulative\\
+\midrule
+1 & 54.7898\% & 54.7898\%\\
+2 & 45.2102\% & 100.0000\%\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{\label{tab:unnamed-chunk-8}Variance Explained by Components (Y)}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{|>{\centering\arraybackslash}p{3cm}c>{}c|}
+\toprule
+Latent Vector & Explained Variance & Cumulative\\
+\midrule
+1 & 80.0449\% & 80.0449\%\\
+2 & 0.4858\% & 80.5307\%\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\end{document} 

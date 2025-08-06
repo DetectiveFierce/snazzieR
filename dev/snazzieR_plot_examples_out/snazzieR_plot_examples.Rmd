@@ -1,0 +1,132 @@
+---
+title: ""
+author: ""
+date: ""
+output: 
+  pdf_document:
+    includes:
+      in_header: "/home/shared-psychosis/Landing Zone/header.tex"
+    keep_tex: true
+header-includes:
+  - \renewcommand{\mytitle}{SnazzieR Example Plots}
+---
+\thispagestyle{firstpage}
+\UNsection{\mytitle}{1.5}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, dev = "cairo_pdf")
+```
+
+## Imports
+```{r message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+library(grid)
+library(snazzieR)
+library(kableExtra)
+```
+
+## Iris Data Analysis
+
+**Source:**
+Fisher, R. (1936). Iris [Dataset]. UCI Machine Learning Repository. \url{https://doi.org/10.24432/C56C76}.
+
+```{r}
+data(iris)
+x.iris <- iris[, c("Sepal.Length", "Sepal.Width")]
+y.iris <- iris[, c("Petal.Length", "Petal.Width")]
+x.mat.iris <- as.matrix(x.iris)
+y.mat.iris <- as.matrix(y.iris)
+```
+
+### Iris Data Visualizations
+
+```{r, fig.height=10, fig.width=12, echo=FALSE}
+# Create individual plots with snazzieR theme and colors
+p1 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+    geom_point(size = 3) +
+    scale_color_manual(values = c(
+        "setosa" = snazzieR::Green,
+        "versicolor" = snazzieR::Red,
+        "virginica" = snazzieR::Blue
+    )) +
+    labs(
+        title = "Sepal Length vs Width by Species",
+        x = "Sepal Length (cm)",
+        y = "Sepal Width (cm)"
+    ) +
+    snazzieR::snazzieR.theme()
+
+p2 <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width, color = Species)) +
+    geom_point(size = 3) +
+    scale_color_manual(values = c(
+        "setosa" = snazzieR::Green,
+        "versicolor" = snazzieR::Red,
+        "virginica" = snazzieR::Blue
+    )) +
+    labs(
+        title = "Petal Length vs Width by Species",
+        x = "Petal Length (cm)",
+        y = "Petal Width (cm)"
+    ) +
+    snazzieR::snazzieR.theme()
+
+p3 <- ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
+    geom_boxplot() +
+    scale_fill_manual(values = c(
+        "setosa" = snazzieR::Green,
+        "versicolor" = snazzieR::Red,
+        "virginica" = snazzieR::Blue
+    )) +
+    labs(
+        title = "Sepal Length Distribution by Species",
+        x = "Species",
+        y = "Sepal Length (cm)"
+    ) +
+    snazzieR::snazzieR.theme()
+
+p4 <- ggplot(iris, aes(x = Species, y = Petal.Length, fill = Species)) +
+    geom_violin() +
+    scale_fill_manual(values = c(
+        "setosa" = snazzieR::Green,
+        "versicolor" = snazzieR::Red,
+        "virginica" = snazzieR::Blue
+    )) +
+    labs(
+        title = "Petal Length Distribution by Species",
+        x = "Species",
+        y = "Petal Length (cm)"
+    ) +
+    snazzieR::snazzieR.theme()
+
+p5 <- ggplot(iris, aes(x = Sepal.Length)) +
+    geom_histogram(bins = 20, fill = snazzieR::Orange, alpha = 0.7) +
+    labs(
+        title = "Distribution of Sepal Length",
+        x = "Sepal Length (cm)",
+        y = "Frequency"
+    ) +
+    snazzieR::snazzieR.theme()
+
+p6 <- ggplot(iris, aes(x = Petal.Width)) +
+    geom_density(fill = snazzieR::Blue, alpha = 0.7) +
+    labs(
+        title = "Density Plot of Petal Width",
+        x = "Petal Width (cm)",
+        y = "Density"
+    ) +
+    snazzieR::snazzieR.theme()
+
+# Arrange plots in a grid
+plot_grid <- arrangeGrob(p1, p2, p3, p4, p5, p6, ncol = 2, nrow = 3)
+
+# Display the grid in the document
+grid.arrange(p1, p2, p3, p4, p5, p6, ncol = 2, nrow = 3)
+
+# Save high-quality PNG for documentation site embedding
+ggsave("iris_visualization_grid.png", plot_grid,
+    width = 14, height = 12, dpi = 300,
+    bg = "white", device = "png"
+)
+``` 

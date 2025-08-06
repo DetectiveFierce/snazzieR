@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+\usepackage{geometry}
+\geometry{margin=0.3in, paperwidth=8in, paperheight=2.5in}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{xcolor}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:unnamed-chunk-7}Eigenvectors of Covariance Matrix}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{cccc}
+\toprule
+$\lambda_1 = 2.9185$ & $\lambda_2 = 0.914$ & $\lambda_3 = 0.1468$ & $\lambda_4 = 0.0207$\\
+\midrule
+$\begin{bmatrix}0.52107\\-0.26935\\0.58041\\0.56486\end{bmatrix}$ & $\begin{bmatrix}0.37742\\0.9233\\0.02449\\0.06694\end{bmatrix}$ & $\begin{bmatrix}0.71957\\-0.24438\\-0.14213\\-0.63427\end{bmatrix}$ & $\begin{bmatrix}-0.26129\\0.12351\\0.80145\\-0.5236\end{bmatrix}$\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[para]
+\item Total Variance = 4
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\end{document} 

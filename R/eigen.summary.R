@@ -6,7 +6,6 @@
 #'
 #' @param cov.matrix A square numeric matrix representing the covariance matrix.
 #' @param caption A character string specifying the table caption (default: "Eigenvectors of Covariance Matrix").
-#' @param space_after_caption A character string specifying the space after the caption in LaTeX (default: "5mm").
 #' @param latex A logical indicating whether to output LaTeX table (default: TRUE). If FALSE, prints as plain text.
 #'
 #' @return A LaTeX formatted table (if latex = TRUE) or plaintext console output (if latex = FALSE).
@@ -16,10 +15,9 @@
 #' @importFrom kableExtra kable_styling add_header_above footnote row_spec
 #' @examples
 #' cov_matrix <- matrix(c(4, 2, 2, 3), nrow = 2)
-#' eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvectors of Covariance Matrix", latex = FALSE)
+#' eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvectors", latex = FALSE)
 eigen.summary <- function(cov.matrix,
                           caption = "Eigenvectors of Covariance Matrix",
-                          space_after_caption = "5mm",
                           latex = TRUE) {
   eigen.data <- eigen(cov.matrix)
   eigenvalues <- eigen.data$values
@@ -51,30 +49,29 @@ eigen.summary <- function(cov.matrix,
       escape = FALSE,
       booktabs = TRUE
     ) |>
-      kable_styling(
+      kableExtra::kable_styling(
         latex_options = c("hold_position"),
         full_width = FALSE
       ) |>
-      add_header_above(c(" " = 1), escape = FALSE, line = FALSE) |>
-      footnote(
+      kableExtra::add_header_above(c(" " = 1), escape = FALSE, line = FALSE) |>
+      kableExtra::footnote(
         general = paste("Total Variance =", round(total_variance, 4)),
         general_title = "",
         footnote_as_chunk = TRUE,
         escape = FALSE,
         threeparttable = TRUE
       ) |>
-      row_spec(0, extra_latex_after = "\\arrayrulecolor{white}", hline_after = FALSE)
+      kableExtra::row_spec(0, extra_latex_after = "\\arrayrulecolor{white}", hline_after = FALSE)
 
     kable_table <- sub("\\\\toprule", "", kable_table)
     return(kable_table)
-
   } else {
     cat("==", caption, "==\n\n")
     cat("Eigenvalues:\n")
     print(round(eigenvalues, 5))
     cat("\nEigenvectors (columns correspond to eigenvalues):")
     eigenvectors_rounded <- round(eigenvectors, 5)
-    colnames(eigenvectors_rounded) <- paste0("λ", 1:length(eigenvalues))
+    colnames(eigenvectors_rounded) <- paste0("lambda", 1:length(eigenvalues))
     print(knitr::kable(eigenvectors_rounded, format = "simple"))
     cat("\nTotal Variance:", round(total_variance, 5), "\n")
     invisible(list(values = eigenvalues, vectors = eigenvectors))
