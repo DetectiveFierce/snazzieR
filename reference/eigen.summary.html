@@ -66,7 +66,6 @@ plaintext summary displaying the results.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">eigen.summary</span><span class="op">(</span></span>
 <span>  <span class="va">cov.matrix</span>,</span>
 <span>  caption <span class="op">=</span> <span class="st">"Eigenvectors of Covariance Matrix"</span>,</span>
-<span>  space_after_caption <span class="op">=</span> <span class="st">"5mm"</span>,</span>
 <span>  latex <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -83,10 +82,6 @@ plaintext summary displaying the results.</p>
 <dd><p>A character string specifying the table caption (default: "Eigenvectors of Covariance Matrix").</p></dd>
 
 
-<dt id="arg-space-after-caption">space_after_caption<a class="anchor" aria-label="anchor" href="#arg-space-after-caption"></a></dt>
-<dd><p>A character string specifying the space after the caption in LaTeX (default: "5mm").</p></dd>
-
-
 <dt id="arg-latex">latex<a class="anchor" aria-label="anchor" href="#arg-latex"></a></dt>
 <dd><p>A logical indicating whether to output LaTeX table (default: TRUE). If FALSE, prints as plain text.</p></dd>
 
@@ -99,8 +94,8 @@ plaintext summary displaying the results.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">cov_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">eigen.summary</span><span class="op">(</span><span class="va">cov_matrix</span>, caption <span class="op">=</span> <span class="st">"Eigenvalues and Eigenvectors of Covariance Matrix"</span>, latex <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> == Eigenvalues and Eigenvectors of Covariance Matrix ==</span>
+<span class="r-in"><span><span class="fu">eigen.summary</span><span class="op">(</span><span class="va">cov_matrix</span>, caption <span class="op">=</span> <span class="st">"Eigenvalues and Eigenvectors"</span>, latex <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> == Eigenvalues and Eigenvectors ==</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Eigenvalues:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.56155 1.43845</span>
@@ -124,7 +119,7 @@ plaintext summary displaying the results.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>

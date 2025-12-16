@@ -1,0 +1,144 @@
+# NIPALS Algorithm for PLS Regression
+
+``` r
+NIPALS.pls <- function(x, y, n.components = NULL) {
+  rank <- qr(x)$rank
+  if (is.null(n.components)) {
+    n.components <- rank
+  } else {
+    n.components <- min(n.components, rank)
+  }
+
+  tol <- 1e-12
+  max.iter <- 1e6
+
+  original.x.names <- colnames(x)
+  original.y.names <- colnames(y)
+
+  # Standardize data (Z-score: center and scale)
+  X_scaled <- scale(x, center = TRUE, scale = TRUE)
+  Y_scaled <- scale(y, center = TRUE, scale = TRUE)
+
+  x.mean <- attr(X_scaled, "scaled:center")
+  x.sd <- attr(X_scaled, "scaled:scale")
+  y.mean <- attr(Y_scaled, "scaled:center")
+  y.sd <- attr(Y_scaled, "scaled:scale")
+
+  E <- X_scaled
+  F <- Y_scaled
+
+  n <- nrow(E)
+  p <- ncol(E)
+  q <- ncol(F)
+
+  # Preallocate matrices
+  T <- matrix(0, n, n.components)  # X scores
+  U <- matrix(0, n, n.components)  # Y scores
+  P_loadings <- matrix(0, p, n.components)  # X loadings
+  W <- matrix(0, p, n.components)  # X weights
+  Q_loadings <- matrix(0, q, n.components)  # Y loadings
+  B_vector <- numeric(n.components)
+
+  # Initial sum of squares for explained variance tracking
+  SSX_total <- sum(E^2)
+  SSY_total <- sum(F^2)
+
+  X_explained <- numeric(n.components)
+  Y_explained <- numeric(n.components)
+
+  set.seed(123)  # For reproducibility
+  for (h in seq_len(n.components)) {
+    u <- rnorm(n)
+    t.old <- rep(0, n)
+
+    for (iter in seq_len(max.iter)) {
+      # Step 1: w = E' u
+      w <- crossprod(E, u)
+      w <- w / sqrt(sum(w^2))
+
+      # Step 2: t = E w
+      t <- E %*% w
+      t <- t / sqrt(sum(t^2))
+
+      # Step 3: c = F' t
+      c <- crossprod(F, t)
+      c <- c / sqrt(sum(c^2))
+
+      # Step 4: u = F c
+      u.new <- F %*% c
+
+      # Check convergence on t
+      if (sum((t - t.old)^2) / sum(t^2) < tol) {
+        break
+      }
+
+      t.old <- t
+      u <- u.new
+
+      if (iter == max.iter) {
+        warning(sprintf("Component %d did not converge after %d iterations", h, max.iter))
+      }
+    }
+
+    # Step 5: b = t' u
+    b <- drop(crossprod(t, u))
+
+    # Step 6: p = E' t
+    p <- drop(crossprod(E, t))
+
+    # Step 7: deflation
+    E <- E - t %*% t(p)
+    F <- F - b * t %*% t(c)
+
+    # Store results
+    T[, h] <- t  # X scores
+    U[, h] <- u  # Y scores
+    P_loadings[, h] <- p
+    W[, h] <- w
+    Q_loadings[, h] <- c
+    B_vector[h] <- b
+
+    # Variance explained
+    X_explained[h] <- sum(p^2) / SSX_total * 100
+    Y_explained[h] <- b^2 / SSY_total * 100
+  }
+
+  # Cumulative explained variance
+  X_cum_explained <- cumsum(X_explained)
+  Y_cum_explained <- cumsum(Y_explained)
+
+  # Final coefficients
+  B_scaled <- W %*% solve(t(P_loadings) %*% W) %*% diag(B_vector) %*% t(Q_loadings)
+
+  # Rescale coefficients to original data scale
+  B_original <- sweep(B_scaled, 2, y.sd, "*")
+  B_original <- sweep(B_original, 1, x.sd, "/")
+
+  # Normalize C (Y weights) properly
+  C <- apply(Q_loadings, 2, function(c) c / sqrt(sum(c^2)))
+
+  # Set names for output clarity
+  rownames(B_original) <- original.x.names
+  colnames(B_original) <- original.y.names
+
+  # Intercept (currently zero because of centering)
+  intercept <- rep(0, length(y.mean))
+  names(intercept) <- original.y.names
+
+  list(
+    T = T,  # X scores
+    U = U,  # Y scores
+    W = W,  # X weights
+    C = C,  # Y weights (normalized)
+    P_loadings = P_loadings,  # X loadings (reference)
+    Q_loadings = Q_loadings,  # Y loadings (reference)
+    B_vector = B_vector,
+    coefficients = B_original,
+    intercept = intercept,
+    X_explained = X_explained,
+    Y_explained = Y_explained,
+    X_cum_explained = X_cum_explained,
+    Y_cum_explained = Y_cum_explained
+  )
+}
+```
