@@ -1,0 +1,479 @@
+
+R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "snazzieR"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> base::assign(".ExTimings", "snazzieR-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('snazzieR')
+
+Attaching package: ‘snazzieR’
+
+The following object is masked from ‘package:datasets’:
+
+    Orange
+
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("ANOVA.summary.table")
+> ### * ANOVA.summary.table
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: ANOVA.summary.table
+> ### Title: Generate a Summary Table for ANOVA Results
+> ### Aliases: ANOVA.summary.table
+> 
+> ### ** Examples
+> 
+> # Fit a linear model
+> model <- lm(mpg ~ wt + hp, data = mtcars)
+> 
+> # Generate a plain-text ANOVA summary table
+> ANOVA.summary.table(model, caption = "ANOVA Summary", latex = FALSE)
+       Term Df    Sum.Sq   Mean.Sq   F.Value P.Value Signif.
+1        wt  1 847.72525 847.72525 126.04109       0      :3
+2        hp  1  83.27418  83.27418  12.38133 0.00145      :)
+3 Residuals 29 195.04775   6.72578                        :3
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("ANOVA.summary.table", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("NIPALS.pls")
+> ### * NIPALS.pls
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: NIPALS.pls
+> ### Title: Partial Least Squares Regression via NIPALS (Internal)
+> ### Aliases: NIPALS.pls
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D X <- matrix(rnorm(100 * 10), 100, 10)
+> ##D Y <- matrix(rnorm(100 * 2), 100, 2)
+> ##D model <- pls.regression(X, Y, n.components = 3, calc.method = "NIPALS")
+> ##D model$coefficients
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("NIPALS.pls", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("SVD.pls")
+> ### * SVD.pls
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: SVD.pls
+> ### Title: Partial Least Squares Regression via SVD (Internal)
+> ### Aliases: SVD.pls
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D X <- matrix(rnorm(100 * 10), 100, 10)
+> ##D Y <- matrix(rnorm(100 * 2), 100, 2)
+> ##D model <- pls.regression(X, Y, n.components = 3, calc.method = "SVD")
+> ##D model$coefficients
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("SVD.pls", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("color.ref")
+> ### * color.ref
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: color.ref
+> ### Title: Display a Color Reference Palette
+> ### Aliases: color.ref
+> 
+> ### ** Examples
+> 
+> color.ref()
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("color.ref", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("eigen.summary")
+> ### * eigen.summary
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: eigen.summary
+> ### Title: Summarize Eigenvalues and Eigenvectors of a Covariance Matrix
+> ### Aliases: eigen.summary
+> 
+> ### ** Examples
+> 
+> cov_matrix <- matrix(c(4, 2, 2, 3), nrow = 2)
+> eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvectors", latex = FALSE)
+== Eigenvalues and Eigenvectors ==
+
+Eigenvalues:
+[1] 5.56155 1.43845
+
+Eigenvectors (columns correspond to eigenvalues):
+
+ lambda1    lambda2
+--------  ---------
+ 0.78821   -0.61541
+ 0.61541    0.78821
+
+Total Variance: 7 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("eigen.summary", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("model.equation")
+> ### * model.equation
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: model.equation
+> ### Title: Generate a Model Equation from a Linear Model
+> ### Aliases: model.equation
+> 
+> ### ** Examples
+> 
+> # Fit a linear model
+> model <- lm(mpg ~ wt + hp, data = mtcars)
+> 
+> # Get LaTeX equation
+> model.equation(model)
+[1] "\\[\\text{mpg} = 37.227 - 3.878 (\\text{wt}) - 0.032 (\\text{hp})\\]"
+attr(,"class")
+[1] "knit_asis"
+attr(,"knit_cacheable")
+[1] NA
+> 
+> # Print equation to console
+> model.equation(model, latex = FALSE)
+mpg = 37.227 - 3.878 (wt) - 0.032 (hp) 
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("model.equation", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("model.summary.table")
+> ### * model.summary.table
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: model.summary.table
+> ### Title: Generate a Summary Table for a Linear Model
+> ### Aliases: model.summary.table
+> 
+> ### ** Examples
+> 
+> # Fit a linear model
+> model <- lm(mpg ~ wt + hp, data = mtcars)
+> 
+> # Print a plain-text version to the console
+> model.summary.table(model, caption = "Linear Model Summary", latex = FALSE)
+== Linear Model Summary ==
+Equation: mpg = 37.227 + -3.878*wt + -0.032*hp
+
+Coefficient Table:
+
+
+              Term          Estimate   Std.Error   P.Value   Signif. 
+------------  ------------  ---------  ----------  --------  --------
+(Intercept)   (Intercept)   37.22727   1.59879     0         :3      
+wt            wt            -3.87783   0.63273     0         :3      
+hp            hp            -0.03177   0.00903     0.00145   :)      
+1                                                                    
+5                                                                    
+
+Model Statistics:
+
+
+Statistic            Value
+---------------  ---------
+MSE                6.09524
+MSE adj.           6.72578
+df                29.00000
+R-squared          0.82679
+R-squared adj.     0.81484
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("model.summary.table", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("pls.regression")
+> ### * pls.regression
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: pls.regression
+> ### Title: Partial Least Squares (PLS) Regression Interface
+> ### Aliases: pls.regression
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D X <- matrix(rnorm(100 * 10), 100, 10)
+> ##D Y <- matrix(rnorm(100 * 2), 100, 2)
+> ##D 
+> ##D # Using SVD (default)
+> ##D model1 <- pls.regression(X, Y, n.components = 3)
+> ##D 
+> ##D # Using NIPALS
+> ##D model2 <- pls.regression(X, Y, n.components = 3, calc.method = "NIPALS")
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("pls.regression", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("pls.summary")
+> ### * pls.summary
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: pls.summary
+> ### Title: Format PLS Model Output as LaTeX Tables
+> ### Aliases: pls.summary
+> 
+> ### ** Examples
+> 
+> # Load example data
+> data(mtcars)
+> 
+> # Prepare data for PLS regression
+> X <- mtcars[, c("wt", "hp", "disp")]
+> Y <- mtcars[, "mpg", drop = FALSE]
+> 
+> # Fit PLS model with 2 components
+> pls.fit <- pls.regression(X, Y, n.components = 2)
+> 
+> # Print a LaTeX-formatted summary
+> pls.summary(pls.fit, include.scores = FALSE)
+[1] "\\begin{minipage}[t]{0.48\\linewidth}\n\\begin{table}[H]\n\\centering\n\\caption{X Weights (W)}\n\\centering\n\\begin{tabular}[t]{|>{}c>{}c|}\n\\toprule\nComp 1 & Comp 2\\\\\n\\midrule\n-0.6025393 & -0.7867505\\\\\n-0.5390041 & 0.2772819\\\\\n-0.5885754 & 0.5514875\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\\end{minipage}\\begin{minipage}[t]{0.48\\linewidth}\n\\begin{table}[H]\n\\centering\n\\caption{Y Weights (C)}\n\\centering\n\\begin{tabular}[t]{>{}c|}\n\\toprule\nComp 1\\\\\n\\midrule\n1\\\\\n1\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\\end{minipage}\n\n\\begin{minipage}[t]{0.48\\linewidth}\n\\begin{table}[H]\n\\centering\n\\caption{X Loadings (P)}\n\\centering\n\\begin{tabular}[t]{|>{}c>{}c|}\n\\toprule\nComp 1 & Comp 2\\\\\n\\midrule\n-5.151497 & -2.0903138\\\\\n-4.877289 & 1.9874167\\\\\n-5.394037 & 0.3198749\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\\end{minipage}\\begin{minipage}[t]{0.48\\linewidth}\n\\begin{table}[H]\n\\centering\n\\caption{Y Loadings (Q)}\n\\centering\n\\begin{tabular}[t]{|>{}c>{}c|}\n\\toprule\nComp 1 & Comp 2\\\\\n\\midrule\n1 & 1\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\\end{minipage}\n\n\\begin{table}[H]\n\\centering\n\\caption{Regression Scalars (b)}\n\\centering\n\\begin{tabular}[t]{|>{}c>{}c|}\n\\toprule\nComponent & Estimate\\\\\n\\midrule\n1 & 5.0114360\\\\\n2 & 0.5792758\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\n\\begin{table}[H]\n\\centering\n\\caption{Regression Coefficients (Original Scale)}\n\\centering\n\\begin{tabular}[t]{>{}l|c}\n\\toprule\n  & Estimate\\\\\n\\midrule\nwt & -2.9703661\\\\\nhp & -0.0144352\\\\\ndisp & -0.0155630\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\n\\begin{table}[H]\n\\centering\n\\caption{Variance Explained by Components (X)}\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{\n\\begin{tabular}[t]{|>{\\centering\\arraybackslash}p{3cm}c>{}c|}\n\\toprule\nLatent Vector & Explained Variance & Cumulative\\\\\n\\midrule\n1 & 85.3995\\% & 85.3995\\%\\\\\n2 & 9.0554\\% & 94.4549\\%\\\\\n\\bottomrule\n\\end{tabular}}\n\\end{table}\n\n\\begin{table}[H]\n\\centering\n\\caption{Variance Explained by Components (Y)}\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{\n\\begin{tabular}[t]{|>{\\centering\\arraybackslash}p{3cm}c>{}c|}\n\\toprule\nLatent Vector & Explained Variance & Cumulative\\\\\n\\midrule\n1 & 81.0145\\% & 81.0145\\%\\\\\n2 & 1.0825\\% & 82.0969\\%\\\\\n\\bottomrule\n\\end{tabular}}\n\\end{table}"
+attr(,"class")
+[1] "knit_asis"
+attr(,"knit_cacheable")
+[1] NA
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("pls.summary", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("ridge.regression")
+> ### * ridge.regression
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: ridge.regression
+> ### Title: Ridge Regression with Automatic Lambda Selection
+> ### Aliases: ridge.regression
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D # Formula interface
+> ##D model1 <- ridge.regression(mpg ~ wt + hp + disp, data = mtcars)
+> ##D 
+> ##D # Matrix interface
+> ##D X <- as.matrix(mtcars[, c("wt", "hp", "disp")])
+> ##D y <- mtcars$mpg
+> ##D model2 <- ridge.regression(x = X, y = y)
+> ##D 
+> ##D # Custom lambda range and folds
+> ##D model3 <- ridge.regression(mpg ~ .,
+> ##D     data = mtcars,
+> ##D     lambda.range = c(0.1, 10), folds = 10
+> ##D )
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("ridge.regression", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("ridge.summary")
+> ### * ridge.summary
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: ridge.summary
+> ### Title: Format Ridge Model Output as LaTeX Tables
+> ### Aliases: ridge.summary
+> 
+> ### ** Examples
+> 
+> # Load example data
+> data(mtcars)
+> 
+> # Fit ridge regression model
+> ridge.fit <- ridge.regression(mpg ~ wt + hp + disp, data = mtcars)
+> 
+> # Print a LaTeX-formatted summary
+> ridge.summary(ridge.fit, include.cv.trace = FALSE)
+[1] "\\begin{minipage}[t]{0.48\\linewidth}\n\\begin{table}[H]\n\\centering\n\\caption{Ridge Model Information}\n\\centering\n\\begin{tabular}[t]{|>{}l>{}l|}\n\\toprule\nParameter & Value\\\\\n\\midrule\n\\textbf{Optimal Lambda} & 1.211867\\\\\n\\textbf{CV-MSE} & 7.270141\\\\\n\\textbf{Training MSE} & 6.155177\\\\\n\\textbf{Number of Predictors} & 3\\\\\n\\textbf{CV Folds} & 5\\\\\n\\textbf{Intercept} & 20.090625\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\\end{minipage}\\begin{minipage}[t]{0.48\\linewidth}\n\\begin{table}[H]\n\\centering\n\\caption{Ridge Regression Coefficients}\n\\centering\n\\begin{tabular}[t]{|>{}ll>{}l|}\n\\toprule\nPredictor & Coefficient & Std.~Error\\\\\n\\midrule\n\\textbf{wt} & -3.201610 & 0.766939\\\\\n\\textbf{hp} & -1.932673 & 0.653821\\\\\n\\textbf{disp} & -0.708828 & 0.881626\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\\end{minipage}\n\n\\begin{table}[H]\n\\centering\n\\caption{Variable Standardization Information}\n\\centering\n\\begin{tabular}[t]{|>{}ll>{}l|}\n\\toprule\nVariable & Mean & Std..Dev.\\\\\n\\midrule\n\\textbf{wt} & 3.21725 & 0.978457\\\\\n\\textbf{hp} & 146.68750 & 68.562868\\\\\n\\textbf{disp} & 230.72188 & 123.938694\\\\\n\\textbf{Response (y)} & 20.09062 & N/A\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}"
+attr(,"class")
+[1] "knit_asis"
+attr(,"knit_cacheable")
+[1] NA
+> 
+> # Print a plain-text summary
+> ridge.summary(ridge.fit, include.cv.trace = FALSE, latex = FALSE)
+=== Ridge Model Information ===
+
+
+Parameter              Value     
+---------------------  ----------
+Optimal Lambda         1.211867  
+CV-MSE                 7.270141  
+Training MSE           6.155177  
+Number of Predictors   3         
+CV Folds               5         
+Intercept              20.090625 
+
+=== Ridge Regression Coefficients ===
+
+
+Predictor    Coefficient   Std.Error
+----------  ------------  ----------
+wt             -3.201610    0.766939
+hp             -1.932673    0.653821
+disp           -0.708828    0.881626
+
+=== Variable Standardization Information ===
+
+
+Variable             Mean  Std.Dev.   
+-------------  ----------  -----------
+wt                3.21725  0.978457   
+hp              146.68750  68.562868  
+disp            230.72188  123.938694 
+Response (y)     20.09062  N/A        
+
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("ridge.summary", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("snazzieR.theme")
+> ### * snazzieR.theme
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: snazzieR.theme
+> ### Title: A Custom ggplot2 Theme for Publication-Ready Plots
+> ### Aliases: snazzieR.theme
+> 
+> ### ** Examples
+> 
+> library(ggplot2)
+> set.seed(123)
+> chains.df <- data.frame(
++   Iteration = 1:500,
++   alpha.1 = cumsum(rnorm(500, mean = 0.01, sd = 0.2)) + rnorm(1, 5, 0.2),
++   alpha.2 = cumsum(rnorm(500, mean = 0.005, sd = 0.2)) + rnorm(1, 5, 0.2),
++   alpha.3 = cumsum(rnorm(500, mean = 0.000, sd = 0.2)) + rnorm(1, 5, 0.2),
++   alpha.4 = cumsum(rnorm(500, mean = -0.005, sd = 0.2)) + rnorm(1, 5, 0.2),
++   alpha.5 = cumsum(rnorm(500, mean = -0.01, sd = 0.2)) + rnorm(1, 5, 0.2)
++ )
+> chain.colors <- c("Chain 1" = Red, "Chain 2" = Orange, "Chain 3" = Yellow,
++                   "Chain 4" = Green, "Chain 5" = Blue)
+> ggplot(chains.df, aes(x = Iteration)) +
++   geom_line(aes(y = alpha.1, color = "Chain 1"), linewidth = 1.2) +
++   geom_line(aes(y = alpha.2, color = "Chain 2"), linewidth = 1.2) +
++   geom_line(aes(y = alpha.3, color = "Chain 3"), linewidth = 1.2) +
++   geom_line(aes(y = alpha.4, color = "Chain 4"), linewidth = 1.2) +
++   geom_line(aes(y = alpha.5, color = "Chain 5"), linewidth = 1.2) +
++   labs(x = "Iteration", y = expression(alpha),
++        title = expression("Traceplot for " ~ alpha)) +
++   scale_color_manual(values = chain.colors, name = "Chains") +
++   snazzieR.theme()
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("snazzieR.theme", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> ### * <FOOTER>
+> ###
+> cleanEx()
+
+detaching ‘package:ggplot2’
+
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  1.017 0.013 1.041 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

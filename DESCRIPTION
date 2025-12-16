@@ -2,7 +2,6 @@ Package: snazzieR
 Type: Package
 Title: Chic and Sleek Functions for Beautiful Statisticians
 Version: 0.1.2
-Author: Aidan J. Wagner <JesusButForGayPeople@proton.me>
 Authors@R: person(given = c("Aidan", "J."),
                   family = "Wagner",
                   email = "JesusButForGayPeople@proton.me",
@@ -13,10 +12,11 @@ Description: Because your linear models deserve better than console output.
   Includes support for Partial Least Squares (PLS) regression via both the SVD and NIPALS algorithms,
   along with a unified interface for model fitting and fabulous LaTeX and console output formatting.
   See the package website at 
-  <https://www.finitesample.space/snazzier>.
+  <https://finitesample.space/snazzier>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+ByteCompile: true
 Imports:
     ggplot2,
     knitr,

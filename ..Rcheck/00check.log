@@ -1,0 +1,14 @@
+* using log directory ‘/home/shared-psychosis/Landing Zone/R Projects/snazzieR/..Rcheck’
+* using R version 4.5.1 (2025-06-13)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (GCC) 15.1.1 20250425
+    GNU Fortran (GCC) 15.1.1 20250425
+* running under: Arch Linux
+* using session charset: UTF-8
+* using option ‘--as-cran’
+* checking for file ‘./DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘snazzieR’ version ‘0.1.2’
+* package encoding: UTF-8
+* checking CRAN incoming feasibility ...

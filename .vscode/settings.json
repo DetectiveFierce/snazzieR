@@ -1,0 +1,82 @@
+{
+    "r.lsp.enabled": true,
+    "r.lsp.path": "/sbin/R",
+    "r.lsp.args": [
+        "--slave",
+        "-e",
+        "languageserver::run()"
+    ],
+    "r.lsp.debug": true,
+    "r.lsp.useGlobalR": true,
+    "r.lsp.diagnostics": true,
+    "r.lsp.completion": true,
+    "r.lsp.hover": true,
+    "r.lsp.signatureHelp": true,
+    "r.lsp.definition": true,
+    "r.lsp.references": true,
+    "r.lsp.documentSymbol": true,
+    "r.lsp.workspaceSymbol": true,
+    "r.lsp.codeAction": true,
+    "r.lsp.rename": true,
+    "r.lsp.formatting": true,
+    "r.lsp.rangeFormatting": true,
+    "r.lsp.onTypeFormatting": true,
+    "r.lsp.folding": true,
+    "r.lsp.selectionRange": true,
+    "r.lsp.linkedEditingRange": true,
+    "r.lsp.callHierarchy": true,
+    "r.lsp.semanticTokens": true,
+    "r.lsp.inlayHints": true,
+    "r.lsp.telemetry": false,
+    "r.lsp.trace": "messages",
+    "r.lsp.logLevel": "debug",
+    "r.lsp.maxConcurrency": 1,
+    "r.lsp.timeout": 30000,
+    "r.lsp.initializationOptions": {
+        "diagnostics": {
+            "enabled": true,
+            "style": "native"
+        },
+        "completion": {
+            "enabled": true,
+            "triggerCharacters": [
+                ".",
+                ":",
+                "$",
+                "@",
+                "["
+            ]
+        },
+        "hover": {
+            "enabled": true
+        },
+        "signatureHelp": {
+            "enabled": true,
+            "triggerCharacters": [
+                "(",
+                ","
+            ]
+        },
+        "documentSymbol": {
+            "enabled": true
+        },
+        "workspaceSymbol": {
+            "enabled": true
+        },
+        "codeAction": {
+            "enabled": true
+        },
+        "rename": {
+            "enabled": true
+        },
+        "formatting": {
+            "enabled": true
+        },
+        "folding": {
+            "enabled": true
+        },
+        "semanticTokens": {
+            "enabled": true
+        }
+    }
+}

@@ -25,6 +25,16 @@ reference:
       - ANOVA.summary.table
       - eigen.summary
       - model.equation
+      - format.pls
+  - title: "Ridge Regression"
+    desc: "Functions for ridge models"
+    contents:
+      - create_kfold_splits
+      - kfold_cross_validation
+      - predict.ridge.model
+      - print.ridge.model
+      - ridge.regression
+      - ridge.summary
   - title: "Theme Functions"
     desc: "Functions for customizing the appearance"
     contents:

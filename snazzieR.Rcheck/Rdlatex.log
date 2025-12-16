@@ -1,0 +1,652 @@
+Hmm ... looks like a package
+Converting parsed Rd's to LaTeX ..
+Creating pdf output from LaTeX ...
+
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./Rd2.tex
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk10.clo))
+(/usr/share/texmf/tex/latex/Rd.sty
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/share/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))))
+(/usr/share/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+Writing index file Rd2.idx
+(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file Rd2.aux.
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+No file Rd2.toc.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fon
+ts/enc/dvips/base/8r.enc}]
+[2]
+[3 </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sna
+zzieR/help/figures/color.ref.png (PNG copy)>]
+[4 </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sna
+zzieR/help/figures/Deep.Red.png> </home/shared-psychosis/Landing Zone/R Project
+s/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Deep.Green.png> </home/shared-
+psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figure
+s/Deep.Grey.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazz
+ieR.Rcheck/snazzieR/help/figures/Dark.Red.png> </home/shared-psychosis/Landing 
+Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Green.png> 
+</home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzi
+eR/help/figures/Dark.Grey.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Red.png> </home/shared-psychosis
+/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Green.p
+ng> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sn
+azzieR/help/figures/Grey.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Red.png> </home/shared-psyc
+hosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Li
+ght.Green.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzie
+R.Rcheck/snazzieR/help/figures/Light.Grey.png> </home/shared-psychosis/Landing 
+Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Red.png> </
+home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR
+/help/figures/Pale.Green.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Grey.png> </home/shared-psyc
+hosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/De
+ep.Orange.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzie
+R.Rcheck/snazzieR/help/figures/Deep.Blue.png> </home/shared-psychosis/Landing Z
+one/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Orange.png> 
+</home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzi
+eR/help/figures/Dark.Blue.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Orange.png> </home/shared-psycho
+sis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Blue
+.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/
+snazzieR/help/figures/Light.Orange.png> </home/shared-psychosis/Landing Zone/R 
+Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Blue.png> </home/
+shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help
+/figures/Pale.Orange.png> </home/shared-psychosis/Landing Zone/R Projects/snazz
+ieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Blue.png> </home/shared-psychosi
+s/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Deep.Y
+ellow.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rc
+heck/snazzieR/help/figures/Deep.Purple.png> </home/shared-psychosis/Landing Zon
+e/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Yellow.png> </
+home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR
+/help/figures/Dark.Purple.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Yellow.png> </home/shared-psycho
+sis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Purp
+le.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rchec
+k/snazzieR/help/figures/Light.Yellow.png> </home/shared-psychosis/Landing Zone/
+R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Purple.png> </h
+ome/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/
+help/figures/Pale.Yellow.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Purple.png>]
+(/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[5]
+Overfull \hbox (47.58038pt too wide) in paragraph at lines 295--295
+ []\T1/pcr/m/n/9 eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvect
+ors", latex = FALSE)[] 
+
+[6] (/usr/share/texmf-dist/tex/latex/psnfss/ts1pcr.fd)
+[7]
+[8]
+Overfull \hbox (9.78043pt too wide) in paragraph at lines 480--480
+ []\T1/pcr/m/n/9 model.summary.table(model, caption = "Linear Model Summary", l
+atex = FALSE)[] 
+
+[9]
+Overfull \hbox (5.5292pt too wide) in paragraph at lines 535--537
+[]\T1/ptm/m/n/10 After com-po-nent ex-trac-tion, the fi-nal re-gres-sion co-ef-
+fi-cient ma-trix $\OML/cmm/m/it/10 B[]$ \T1/ptm/m/n/10 is com-puted and rescale
+d
+
+[10]
+[11]
+Overfull \hbox (54.78088pt too wide) in paragraph at lines 623--623
+ []\T1/pcr/m/n/10 pls.regression(x, y, n.components = NULL, calc.method = c("SV
+D", "NIPALS")) 
+
+[12]
+[13]
+[14]
+[15]
+[16]
+Overfull \hbox (32.37878pt too wide) in paragraph at lines 912--913
+[]\T1/ptm/m/n/10 A ridge model ob-ject re-turned by [][][]\T1/pcr/m/n/10 ridge.
+regression[][][]() []\T1/ptm/m/n/10 (class []\T1/pcr/m/n/10 "ridge.model"[]\T1/
+ptm/m/n/10 ). 
+
+Overfull \hbox (2.93768pt too wide) in paragraph at lines 918--920
+[]\T1/ptm/m/n/10 Logical; if []\T1/pcr/m/n/10 TRUE []\T1/ptm/m/n/10 (de-fault),
+ re-turns LaTeX-formatted ta-bles us-ing []\T1/pcr/m/n/10 kableExtra[]\T1/ptm/m
+/n/10 .
+
+[17]
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 972--972
+ []  \T1/pcr/m/n/9 alpha.2 = cumsum(rnorm(500, mean = 0.005, sd = 0.2)) + rnorm
+(1, 5, 0.2),[] 
+
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 973--973
+ []  \T1/pcr/m/n/9 alpha.3 = cumsum(rnorm(500, mean = 0.000, sd = 0.2)) + rnorm
+(1, 5, 0.2),[] 
+
+Overfull \hbox (9.78043pt too wide) in paragraph at lines 974--974
+ []  \T1/pcr/m/n/9 alpha.4 = cumsum(rnorm(500, mean = -0.005, sd = 0.2)) + rnor
+m(1, 5, 0.2),[] 
+
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 977--977
+ []\T1/pcr/m/n/9 chain.colors <- c("Chain 1" = Red, "Chain 2" = Orange, "Chain 
+3" = Yellow,[] 
+
+[18]
+[19]
+No file Rd2.ind.
+
+[20] (/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/ur
+w/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
+usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fo
+nts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on Rd2.pdf (20 pages, 243435 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.17 [TeX Live 2026/dev] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (75 entries accepted, 0 rejected).
+Sorting entries....done (510 comparisons).
+Generating output file Rd2.ind....done (157 lines written, 0 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./Rd2.tex
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk10.clo))
+(/usr/share/texmf/tex/latex/Rd.sty
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/share/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))))
+(/usr/share/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+Writing index file Rd2.idx
+(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.aux)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.out)
+(/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.out)
+(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+(/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.toc
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fon
+ts/enc/dvips/base/8r.enc}])
+[2]
+[3 </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sna
+zzieR/help/figures/color.ref.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[4]
+[5 </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sna
+zzieR/help/figures/Deep.Red.png> </home/shared-psychosis/Landing Zone/R Project
+s/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Deep.Green.png> </home/shared-
+psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figure
+s/Deep.Grey.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazz
+ieR.Rcheck/snazzieR/help/figures/Dark.Red.png> </home/shared-psychosis/Landing 
+Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Green.png> 
+</home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzi
+eR/help/figures/Dark.Grey.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Red.png> </home/shared-psychosis
+/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Green.p
+ng> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sn
+azzieR/help/figures/Grey.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Red.png> </home/shared-psyc
+hosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Li
+ght.Green.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzie
+R.Rcheck/snazzieR/help/figures/Light.Grey.png> </home/shared-psychosis/Landing 
+Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Red.png> </
+home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR
+/help/figures/Pale.Green.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Grey.png> </home/shared-psyc
+hosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/De
+ep.Orange.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzie
+R.Rcheck/snazzieR/help/figures/Deep.Blue.png> </home/shared-psychosis/Landing Z
+one/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Orange.png> 
+</home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzi
+eR/help/figures/Dark.Blue.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Orange.png> </home/shared-psycho
+sis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Blue
+.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/
+snazzieR/help/figures/Light.Orange.png> </home/shared-psychosis/Landing Zone/R 
+Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Blue.png> </home/
+shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help
+/figures/Pale.Orange.png> </home/shared-psychosis/Landing Zone/R Projects/snazz
+ieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Blue.png> </home/shared-psychosi
+s/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Deep.Y
+ellow.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rc
+heck/snazzieR/help/figures/Deep.Purple.png> </home/shared-psychosis/Landing Zon
+e/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Yellow.png> </
+home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR
+/help/figures/Dark.Purple.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Yellow.png> </home/shared-psycho
+sis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Purp
+le.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rchec
+k/snazzieR/help/figures/Light.Yellow.png> </home/shared-psychosis/Landing Zone/
+R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Purple.png> </h
+ome/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/
+help/figures/Pale.Yellow.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Purple.png>]
+(/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[6]
+Overfull \hbox (47.58038pt too wide) in paragraph at lines 295--295
+ []\T1/pcr/m/n/9 eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvect
+ors", latex = FALSE)[] 
+
+[7] (/usr/share/texmf-dist/tex/latex/psnfss/ts1pcr.fd)
+[8]
+[9]
+Overfull \hbox (9.78043pt too wide) in paragraph at lines 480--480
+ []\T1/pcr/m/n/9 model.summary.table(model, caption = "Linear Model Summary", l
+atex = FALSE)[] 
+
+[10]
+Overfull \hbox (5.5292pt too wide) in paragraph at lines 535--537
+[]\T1/ptm/m/n/10 After com-po-nent ex-trac-tion, the fi-nal re-gres-sion co-ef-
+fi-cient ma-trix $\OML/cmm/m/it/10 B[]$ \T1/ptm/m/n/10 is com-puted and rescale
+d
+
+[11]
+[12]
+Overfull \hbox (54.78088pt too wide) in paragraph at lines 623--623
+ []\T1/pcr/m/n/10 pls.regression(x, y, n.components = NULL, calc.method = c("SV
+D", "NIPALS")) 
+
+[13]
+[14]
+[15]
+[16]
+[17]
+Overfull \hbox (32.37878pt too wide) in paragraph at lines 912--913
+[]\T1/ptm/m/n/10 A ridge model ob-ject re-turned by [][][]\T1/pcr/m/n/10 ridge.
+regression[][][]() []\T1/ptm/m/n/10 (class []\T1/pcr/m/n/10 "ridge.model"[]\T1/
+ptm/m/n/10 ). 
+
+Overfull \hbox (2.93768pt too wide) in paragraph at lines 918--920
+[]\T1/ptm/m/n/10 Logical; if []\T1/pcr/m/n/10 TRUE []\T1/ptm/m/n/10 (de-fault),
+ re-turns LaTeX-formatted ta-bles us-ing []\T1/pcr/m/n/10 kableExtra[]\T1/ptm/m
+/n/10 .
+
+[18]
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 972--972
+ []  \T1/pcr/m/n/9 alpha.2 = cumsum(rnorm(500, mean = 0.005, sd = 0.2)) + rnorm
+(1, 5, 0.2),[] 
+
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 973--973
+ []  \T1/pcr/m/n/9 alpha.3 = cumsum(rnorm(500, mean = 0.000, sd = 0.2)) + rnorm
+(1, 5, 0.2),[] 
+
+Overfull \hbox (9.78043pt too wide) in paragraph at lines 974--974
+ []  \T1/pcr/m/n/9 alpha.4 = cumsum(rnorm(500, mean = -0.005, sd = 0.2)) + rnor
+m(1, 5, 0.2),[] 
+
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 977--977
+ []\T1/pcr/m/n/9 chain.colors <- c("Chain 1" = Red, "Chain 2" = Orange, "Chain 
+3" = Yellow,[] 
+
+[19]
+[20] (/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.ind
+[21]
+
+[22]) (/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/ur
+w/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb
+></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (22 pages, 257279 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.17 [TeX Live 2026/dev] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (75 entries accepted, 0 rejected).
+Sorting entries....done (510 comparisons).
+Generating output file Rd2.ind....done (157 lines written, 0 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./Rd2.tex
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk10.clo))
+(/usr/share/texmf/tex/latex/Rd.sty
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/share/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))))
+(/usr/share/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+Writing index file Rd2.idx
+(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.aux)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.out)
+(/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.out)
+(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+(/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.toc
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fon
+ts/enc/dvips/base/8r.enc}])
+[2]
+[3 </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sna
+zzieR/help/figures/color.ref.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[4]
+[5 </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sna
+zzieR/help/figures/Deep.Red.png> </home/shared-psychosis/Landing Zone/R Project
+s/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Deep.Green.png> </home/shared-
+psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figure
+s/Deep.Grey.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazz
+ieR.Rcheck/snazzieR/help/figures/Dark.Red.png> </home/shared-psychosis/Landing 
+Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Green.png> 
+</home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzi
+eR/help/figures/Dark.Grey.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Red.png> </home/shared-psychosis
+/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Green.p
+ng> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/sn
+azzieR/help/figures/Grey.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Red.png> </home/shared-psyc
+hosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Li
+ght.Green.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzie
+R.Rcheck/snazzieR/help/figures/Light.Grey.png> </home/shared-psychosis/Landing 
+Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Red.png> </
+home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR
+/help/figures/Pale.Green.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Grey.png> </home/shared-psyc
+hosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/De
+ep.Orange.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzie
+R.Rcheck/snazzieR/help/figures/Deep.Blue.png> </home/shared-psychosis/Landing Z
+one/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Orange.png> 
+</home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzi
+eR/help/figures/Dark.Blue.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Orange.png> </home/shared-psycho
+sis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Blue
+.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/
+snazzieR/help/figures/Light.Orange.png> </home/shared-psychosis/Landing Zone/R 
+Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Blue.png> </home/
+shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help
+/figures/Pale.Orange.png> </home/shared-psychosis/Landing Zone/R Projects/snazz
+ieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Blue.png> </home/shared-psychosi
+s/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Deep.Y
+ellow.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rc
+heck/snazzieR/help/figures/Deep.Purple.png> </home/shared-psychosis/Landing Zon
+e/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Dark.Yellow.png> </
+home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR
+/help/figures/Dark.Purple.png> </home/shared-psychosis/Landing Zone/R Projects/
+snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Yellow.png> </home/shared-psycho
+sis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Purp
+le.png> </home/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rchec
+k/snazzieR/help/figures/Light.Yellow.png> </home/shared-psychosis/Landing Zone/
+R Projects/snazzieR/snazzieR.Rcheck/snazzieR/help/figures/Light.Purple.png> </h
+ome/shared-psychosis/Landing Zone/R Projects/snazzieR/snazzieR.Rcheck/snazzieR/
+help/figures/Pale.Yellow.png> </home/shared-psychosis/Landing Zone/R Projects/s
+nazzieR/snazzieR.Rcheck/snazzieR/help/figures/Pale.Purple.png>]
+(/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[6]
+Overfull \hbox (47.58038pt too wide) in paragraph at lines 295--295
+ []\T1/pcr/m/n/9 eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvect
+ors", latex = FALSE)[] 
+
+[7] (/usr/share/texmf-dist/tex/latex/psnfss/ts1pcr.fd)
+[8]
+[9]
+Overfull \hbox (9.78043pt too wide) in paragraph at lines 480--480
+ []\T1/pcr/m/n/9 model.summary.table(model, caption = "Linear Model Summary", l
+atex = FALSE)[] 
+
+[10]
+Overfull \hbox (5.5292pt too wide) in paragraph at lines 535--537
+[]\T1/ptm/m/n/10 After com-po-nent ex-trac-tion, the fi-nal re-gres-sion co-ef-
+fi-cient ma-trix $\OML/cmm/m/it/10 B[]$ \T1/ptm/m/n/10 is com-puted and rescale
+d
+
+[11]
+[12]
+Overfull \hbox (54.78088pt too wide) in paragraph at lines 623--623
+ []\T1/pcr/m/n/10 pls.regression(x, y, n.components = NULL, calc.method = c("SV
+D", "NIPALS")) 
+
+[13]
+[14]
+[15]
+[16]
+[17]
+Overfull \hbox (32.37878pt too wide) in paragraph at lines 912--913
+[]\T1/ptm/m/n/10 A ridge model ob-ject re-turned by [][][]\T1/pcr/m/n/10 ridge.
+regression[][][]() []\T1/ptm/m/n/10 (class []\T1/pcr/m/n/10 "ridge.model"[]\T1/
+ptm/m/n/10 ). 
+
+Overfull \hbox (2.93768pt too wide) in paragraph at lines 918--920
+[]\T1/ptm/m/n/10 Logical; if []\T1/pcr/m/n/10 TRUE []\T1/ptm/m/n/10 (de-fault),
+ re-turns LaTeX-formatted ta-bles us-ing []\T1/pcr/m/n/10 kableExtra[]\T1/ptm/m
+/n/10 .
+
+[18]
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 972--972
+ []  \T1/pcr/m/n/9 alpha.2 = cumsum(rnorm(500, mean = 0.005, sd = 0.2)) + rnorm
+(1, 5, 0.2),[] 
+
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 973--973
+ []  \T1/pcr/m/n/9 alpha.3 = cumsum(rnorm(500, mean = 0.000, sd = 0.2)) + rnorm
+(1, 5, 0.2),[] 
+
+Overfull \hbox (9.78043pt too wide) in paragraph at lines 974--974
+ []  \T1/pcr/m/n/9 alpha.4 = cumsum(rnorm(500, mean = -0.005, sd = 0.2)) + rnor
+m(1, 5, 0.2),[] 
+
+Overfull \hbox (4.38043pt too wide) in paragraph at lines 977--977
+ []\T1/pcr/m/n/9 chain.colors <- c("Chain 1" = Red, "Chain 2" = Orange, "Chain 
+3" = Yellow,[] 
+
+[19]
+[20] (/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.ind
+[21]
+
+[22]) (/tmp/RtmpszKKFV/Rd2pdfcd745640cd7c/Rd2.aux) )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/ur
+w/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb
+></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (22 pages, 257349 bytes).
+Transcript written on Rd2.log.
+Saving output to ‘snazzieR-manual.pdf’ ...
+Done
+You may want to clean up by 'rm -Rf /tmp/RtmpszKKFV/Rd2pdfcd745640cd7c'

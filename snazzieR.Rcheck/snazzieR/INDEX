@@ -1,0 +1,22 @@
+ANOVA.summary.table     Generate a Summary Table for ANOVA Results
+color.ref               Display a Color Reference Palette
+colors                  SnazzieR Color Palette
+create_kfold_splits     Create K-Fold Cross Validation Splits
+eigen.summary           Summarize Eigenvalues and Eigenvectors of a
+                        Covariance Matrix
+format.pls              Format PLS Model Output as LaTeX or Console
+                        Tables
+kfold_cross_validation
+                        Perform K-Fold Cross Validation
+model.equation          Generate a Model Equation from a Linear Model
+model.summary.table     Generate a Summary Table for a Linear Model
+pls.regression          Partial Least Squares (PLS) Regression
+                        Interface
+pls.summary             Format PLS Model Output as LaTeX Tables
+predict.ridge.model     Predict Method for Ridge Model Objects
+print.ridge.model       Print Method for Ridge Model Objects
+ridge.regression        Ridge Regression with Automatic Lambda
+                        Selection
+ridge.summary           Format Ridge Model Output as LaTeX Tables
+snazzieR.theme          A Custom ggplot2 Theme for Publication-Ready
+                        Plots

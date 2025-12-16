@@ -1,11 +1,9 @@
-linters: with_defaults(
-  line_length_linter(120),
-  object_name_linter = NULL,
-  object_usage_linter = NULL,
-  commented_code_linter = NULL
-)
+linters: linters_with_defaults(
+    line_length_linter(120),
+    commented_code_linter = NULL
+  )
 exclusions: list(
-  "R/Rplots.R",
-  "tests/testthat.R",
-  "tests/testthat/"
-) 
+    "R/Rplots.R",
+    "tests/testthat.R",
+    "tests/testthat/"
+  ) 
