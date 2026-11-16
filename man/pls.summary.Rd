@@ -14,7 +14,9 @@ pls.summary(x, ..., include.scores = TRUE)
 \item{include.scores}{Logical. Whether to include score matrices (T and U). Default is \code{TRUE}.}
 }
 \value{
-Returns a \code{knitr::asis_output} object (LaTeX code) for PDF rendering.
+Returns a \code{knitr::asis_output} object (LaTeX code) for PDF rendering
+  It has class \code{"snazzieR_table"}, so it also previews when a chunk is run interactively
+  (see \code{\link{snazzieR_table}}).
 }
 \description{
 Formats and displays Partial Least Squares (PLS) model output from \code{pls.regression()}

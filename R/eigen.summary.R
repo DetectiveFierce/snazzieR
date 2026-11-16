@@ -5,26 +5,30 @@
 #' plaintext summary displaying the results.
 #'
 #' @param cov.matrix A square numeric matrix representing the covariance matrix.
-#' @param caption A character string specifying the table caption (default: "Eigenvectors of Covariance Matrix").
+#' @param title A character string used as the table's title (default: "Eigenvectors of Covariance Matrix").
+#' @param caption Deprecated alias for \code{title}, kept so existing code keeps working.
 #' @param latex A logical indicating whether to output LaTeX table (default: TRUE). If FALSE, prints as plain text.
 #'
-#' @return A LaTeX formatted table (if latex = TRUE) or plaintext console output (if latex = FALSE).
+#' @return A LaTeX formatted table of class \code{"snazzieR_table"} (if latex = TRUE; see
+#'   \code{\link{snazzieR_table}} for interactive previews) or plaintext console output (if latex = FALSE).
 #' @export
 #'
 #' @importFrom knitr kable
 #' @importFrom kableExtra kable_styling add_header_above footnote row_spec
 #' @examples
 #' cov_matrix <- matrix(c(4, 2, 2, 3), nrow = 2)
-#' eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvectors", latex = FALSE)
+#' eigen.summary(cov_matrix, title = "Eigenvalues and Eigenvectors", latex = FALSE)
 eigen.summary <- function(cov.matrix,
-                          caption = "Eigenvectors of Covariance Matrix",
-                          latex = TRUE) {
+                          title = "Eigenvectors of Covariance Matrix",
+                          latex = TRUE,
+                          caption) {
+  if (!missing(caption)) title <- caption
   eigen.data <- eigen(cov.matrix)
   eigenvalues <- eigen.data$values
   eigenvectors <- eigen.data$vectors
 
   # Ensure consistent sign: make max absolute value in each eigenvector column positive
-  for (i in 1:ncol(eigenvectors)) {
+  for (i in seq_len(ncol(eigenvectors))) {
     max_idx <- which.max(abs(eigenvectors[, i]))
     if (eigenvectors[max_idx, i] < 0) {
       eigenvectors[, i] <- -eigenvectors[, i]
@@ -34,7 +38,7 @@ eigen.summary <- function(cov.matrix,
   total_variance <- sum(eigenvalues)
 
   if (latex) {
-    col_titles <- paste0("$\\lambda_", 1:length(eigenvalues), " = ", round(eigenvalues, 4), "$")
+    col_titles <- paste0("$\\lambda_", seq_along(eigenvalues), " = ", round(eigenvalues, 4), "$")
     eigenvectors_bracketed <- apply(eigenvectors, 2, function(x) {
       paste0("$\\begin{bmatrix}", paste(round(x, 5), collapse = "\\\\"), "\\end{bmatrix}$")
     })
@@ -43,7 +47,7 @@ eigen.summary <- function(cov.matrix,
 
     kable_table <- kable(
       eigenvectors_df,
-      caption = caption,
+      caption = title,
       align = "c",
       format = "latex",
       escape = FALSE,
@@ -64,14 +68,20 @@ eigen.summary <- function(cov.matrix,
       kableExtra::row_spec(0, extra_latex_after = "\\arrayrulecolor{white}", hline_after = FALSE)
 
     kable_table <- sub("\\\\toprule", "", kable_table)
-    return(kable_table)
+    preview.df <- as.data.frame(round(eigenvectors, 5))
+    colnames(preview.df) <- paste0("\u03bb", seq_along(eigenvalues), " = ", round(eigenvalues, 4))
+    return(snazzieR_wrap(kable_table, list(preview_table(
+      preview.df,
+      caption = title,
+      notes = paste("Total Variance =", round(total_variance, 4))
+    ))))
   } else {
-    cat("==", caption, "==\n\n")
+    cat("==", title, "==\n\n")
     cat("Eigenvalues:\n")
     print(round(eigenvalues, 5))
     cat("\nEigenvectors (columns correspond to eigenvalues):")
     eigenvectors_rounded <- round(eigenvectors, 5)
-    colnames(eigenvectors_rounded) <- paste0("lambda", 1:length(eigenvalues))
+    colnames(eigenvectors_rounded) <- paste0("lambda", seq_along(eigenvalues))
     print(knitr::kable(eigenvectors_rounded, format = "simple"))
     cat("\nTotal Variance:", round(total_variance, 5), "\n")
     invisible(list(values = eigenvalues, vectors = eigenvectors))

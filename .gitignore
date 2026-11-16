@@ -7,3 +7,5 @@ inst/doc
 /Meta/
 docs/*
 dev/*
+*.Rcheck/
+snazzieR_*.tar.gz

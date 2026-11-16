@@ -4,17 +4,23 @@
 \alias{ANOVA.summary.table}
 \title{Generate a Summary Table for ANOVA Results}
 \usage{
-ANOVA.summary.table(model, caption, latex = TRUE)
+ANOVA.summary.table(model, title = "ANOVA Summary", latex = TRUE, caption)
 }
 \arguments{
 \item{model}{A model object for which ANOVA results are computed (e.g., output from `lm()` or `aov()`).}
 
-\item{caption}{A character string to be used as the caption for the table.}
+\item{title}{A character string used as the table's title (its LaTeX
+caption). Defaults to \code{"ANOVA Summary"}.}
 
 \item{latex}{Logical; if `TRUE`, returns a LaTeX-formatted table using `kableExtra`. If `FALSE`, prints a plain-text version to the console.}
+
+\item{caption}{Deprecated alias for \code{title}, kept so existing code
+keeps working.}
 }
 \value{
-If `latex = TRUE`, a LaTeX-formatted table object. If `latex = FALSE`, prints the summary table and returns it (invisibly).
+If `latex = TRUE`, a LaTeX-formatted table object (of class
+  \code{"snazzieR_table"}, which also previews when a chunk is run
+  interactively; see \code{\link{snazzieR_table}}). If `latex = FALSE`, prints the summary table and returns it (invisibly).
 }
 \description{
 This function creates a summary table for ANOVA results, including degrees of freedom,
@@ -26,6 +32,6 @@ LaTeX (for PDF reports) or plain text (for console viewing).
 model <- lm(mpg ~ wt + hp, data = mtcars)
 
 # Generate a plain-text ANOVA summary table
-ANOVA.summary.table(model, caption = "ANOVA Summary", latex = FALSE)
+ANOVA.summary.table(model, title = "ANOVA Summary", latex = FALSE)
 
 }

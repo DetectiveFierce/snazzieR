@@ -10,7 +10,9 @@
 #' @param latex Logical; if \code{TRUE} (default), returns LaTeX-formatted tables using \code{kableExtra}.
 #'        If \code{FALSE}, prints plain-text summary tables to the console.
 #'
-#' @return If \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code) for PDF rendering.
+#' @return If \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code) for PDF rendering
+#'   It has class \code{"snazzieR_table"}, so it also previews when a chunk is run interactively
+#'   (see \code{\link{snazzieR_table}}).
 #'         If \code{latex = FALSE}, prints formatted summary tables to the console and returns the underlying data frames.
 #'
 #' @export
@@ -42,14 +44,11 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
         if (!requireNamespace("kableExtra", quietly = TRUE)) {
             stop("kableExtra package is required for LaTeX output", call. = FALSE)
         }
-        if (!requireNamespace("dplyr", quietly = TRUE)) {
-            stop("dplyr package is required for LaTeX output", call. = FALSE)
-        }
-        `%>%` <- dplyr::`%>%`
     }
 
     if (latex) {
         kables <- list()
+        previews <- list()
 
         # === Helper to wrap table in minipage ===
         wrap_minipage <- function(latex_table, width = "0.48\\linewidth") {
@@ -71,6 +70,7 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
             )
         )
 
+        previews$model.info <- preview_table(model.info.df, "Ridge Model Information")
         kables$model.info <- knitr::kable(
             model.info.df,
             format = "latex",
@@ -79,14 +79,14 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
             align = "l",
             escape = FALSE,
             linesep = ""
-        ) %>%
+        ) |>
             kableExtra::kable_styling(
                 bootstrap_options = "striped",
                 latex_options = "HOLD_position",
                 full_width = FALSE,
                 position = "center"
-            ) %>%
-            kableExtra::column_spec(1, border_left = TRUE, bold = TRUE) %>%
+            ) |>
+            kableExtra::column_spec(1, border_left = TRUE, bold = TRUE) |>
             kableExtra::column_spec(2, border_right = TRUE)
 
         # 2. Coefficients
@@ -101,6 +101,7 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
             # Rename the column to use LaTeX code for a non-breaking space
             colnames(coef.df)[colnames(coef.df) == "Std. Error"] <- "Std.~Error"
 
+            previews$coefficients <- preview_table(coef.df, "Ridge Regression Coefficients", row.names = FALSE)
             kables$coefficients <- knitr::kable(
                 coef.df,
                 format = "latex",
@@ -109,14 +110,14 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
                 align = "l",
                 escape = FALSE,
                 row.names = FALSE
-            ) %>%
+            ) |>
                 kableExtra::kable_styling(
                     bootstrap_options = "striped",
                     latex_options = "HOLD_position",
                     full_width = FALSE,
                     position = "center"
-                ) %>%
-                kableExtra::column_spec(1, border_left = TRUE, bold = TRUE) %>%
+                ) |>
+                kableExtra::column_spec(1, border_left = TRUE, bold = TRUE) |>
                 kableExtra::column_spec(3, border_right = TRUE)
         }
 
@@ -127,6 +128,7 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
             cv.df$Lambda <- round(cv.df$Lambda, 6)
             cv.df$`CV-MSE` <- round(cv.df$`CV-MSE`, 6)
 
+            previews$cv.trace <- preview_table(cv.df, "Cross-Validation Results")
             kables$cv.trace <- knitr::kable(
                 cv.df,
                 format = "latex",
@@ -134,14 +136,14 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
                 booktabs = TRUE,
                 align = "c",
                 escape = FALSE
-            ) %>%
+            ) |>
                 kableExtra::kable_styling(
                     bootstrap_options = "striped",
                     latex_options = c("HOLD_position", "scale_down"),
                     full_width = FALSE,
                     position = "center"
-                ) %>%
-                kableExtra::column_spec(1, border_left = TRUE) %>%
+                ) |>
+                kableExtra::column_spec(1, border_left = TRUE) |>
                 kableExtra::column_spec(2, border_right = TRUE)
         }
 
@@ -166,6 +168,7 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
                 scale.df <- pred.scale.df
             }
 
+            previews$scaling <- preview_table(scale.df, "Variable Standardization Information", row.names = FALSE)
             kables$scaling <- knitr::kable(
                 scale.df,
                 format = "latex",
@@ -174,14 +177,14 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
                 align = "l",
                 escape = FALSE,
                 row.names = FALSE
-            ) %>%
+            ) |>
                 kableExtra::kable_styling(
                     bootstrap_options = "striped",
                     latex_options = "HOLD_position",
                     full_width = FALSE,
                     position = "center"
-                ) %>%
-                kableExtra::column_spec(1, border_left = TRUE, bold = TRUE) %>%
+                ) |>
+                kableExtra::column_spec(1, border_left = TRUE, bold = TRUE) |>
                 kableExtra::column_spec(3, border_right = TRUE)
         }
 
@@ -218,7 +221,7 @@ ridge.summary <- function(x, ..., include.cv.trace = TRUE, latex = TRUE) {
             return(knitr::asis_output(""))
         }
 
-        return(knitr::asis_output(paste(output, collapse = "\n\n")))
+        return(snazzieR_wrap(knitr::asis_output(paste(output, collapse = "\n\n")), unname(previews)))
     } else {
         # === Plain Text Output ===
 

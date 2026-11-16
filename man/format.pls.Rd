@@ -16,7 +16,8 @@
 \item{latex}{Logical. If \code{TRUE}, produces LaTeX output (for PDF rendering). If \code{FALSE}, prints to console. Default is \code{FALSE}.}
 }
 \value{
-When \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code). When \code{FALSE}, prints formatted tables to console.
+When \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code) of class
+  \code{"snazzieR_table"} (see \code{\link{snazzieR_table}} for interactive previews). When \code{FALSE}, prints formatted tables to console.
 }
 \description{
 Formats and displays Partial Least Squares (PLS) model output from \code{pls.regression()}

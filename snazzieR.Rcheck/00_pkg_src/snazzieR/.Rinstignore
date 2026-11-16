@@ -1,3 +1,0 @@
-# Exclude figures directory from installation
-inst/doc/figures
-figures 

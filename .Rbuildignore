@@ -1,11 +1,17 @@
-# Development files
-dev/
-.lintr
-.github/
-_pkgdown.yml
-snazzieR.Rproj
-docs/
-pkgdown/
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.Rprofile$
+^\.Rhistory$
+^\.lintr$
 ^\.vscode$
+^\.github$
+^dev$
+^docs$
+^pkgdown$
+^_pkgdown\.yml$
+^Meta$
+^doc$
+^.*\.Rcheck$
+^snazzieR_.*\.tar\.gz$
+^cran-comments\.md$
+^CRAN-SUBMISSION$

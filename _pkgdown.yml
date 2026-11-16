@@ -1,4 +1,4 @@
-url: https://jesusbutforgaypeople.github.io/snazzieR/
+url: https://detectivefierce.github.io/snazzieR/
 
 pandoc: '3.2'
 pkgdown: 2.1.2
@@ -26,6 +26,14 @@ reference:
       - eigen.summary
       - model.equation
       - format.pls
+      - snazzieR_table
+  - title: "Regression Diagnostics"
+    desc: "Diagnostic plots and tables of unusual observations"
+    contents:
+      - diagnostics.plots
+      - marginal.model.plots
+      - unusual.points.table
+      - VIF.table
   - title: "Ridge Regression"
     desc: "Functions for ridge models"
     contents:
@@ -43,6 +51,9 @@ reference:
       - color.ref
 
 articles:
+  - title: "Regression Diagnostics"
+    contents:
+      - regression-diagnostics
   - title: "Partial Least Squares (PLS) Regression"
     contents:
       - pls-overview
@@ -59,12 +70,16 @@ navbar:
       href: reference/index.html
     - text: "Articles"
       menu:
+        - text: "Regression Diagnostics"
+          href: articles/regression-diagnostics.html
         - text: "PLS Overview"
           href: articles/pls-overview.html
         - text: "NIPALS Algorithm"
           href: articles/pls-nipals.html
         - text: "SVD Algorithm"
           href: articles/pls-svd.html
+    - text: "News"
+      href: news/index.html
 
 template:
   bootstrap: 5

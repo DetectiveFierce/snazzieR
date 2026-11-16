@@ -4,18 +4,26 @@
 \alias{model.summary.table}
 \title{Generate a Summary Table for a Linear Model}
 \usage{
-model.summary.table(model, caption, latex = TRUE)
+model.summary.table(model, title = "Model Summary", latex = TRUE, caption)
 }
 \arguments{
 \item{model}{A linear model object (typically the result of `lm()`).}
 
-\item{caption}{A character string to be used as the caption for the table.}
+\item{title}{A character string used as the table's title (its LaTeX
+caption). Defaults to \code{"Model Summary"}. The fitted model
+equation is typeset on its own centered line between the title and
+the table.}
 
 \item{latex}{Logical; if `TRUE` (default), returns a LaTeX-formatted table using `kableExtra`.
 If `FALSE`, prints plain-text summary tables to the console.}
+
+\item{caption}{Deprecated alias for \code{title}, kept so existing code
+keeps working.}
 }
 \value{
-If `latex = TRUE`, returns a LaTeX-formatted `kableExtra` table object.
+If `latex = TRUE`, returns a LaTeX-formatted `kableExtra` table object
+        (of class \code{"snazzieR_table"}, which also previews nicely when a
+        chunk is run interactively; see \code{\link{snazzieR_table}}).
         If `latex = FALSE`, prints formatted summary tables to the console and returns the underlying data frame.
 }
 \description{
@@ -29,6 +37,6 @@ LaTeX (for PDF reports) or plain text (for console viewing).
 model <- lm(mpg ~ wt + hp, data = mtcars)
 
 # Print a plain-text version to the console
-model.summary.table(model, caption = "Linear Model Summary", latex = FALSE)
+model.summary.table(model, title = "Linear Model Summary", latex = FALSE)
 
 }

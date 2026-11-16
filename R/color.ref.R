@@ -7,7 +7,7 @@
 #' \if{html}{\figure{color.ref.png}{options: width=45 alt="Light Grey color swatch"}}
 #' \if{latex}{\figure{color.ref.png}{options: width=4.5in}}
 #'
-#' @return A plot displaying the color palette.
+#' @return Called for its side effect of drawing the color palette; returns \code{NULL} invisibly.
 #' @importFrom graphics par rect text axis
 #' @export
 #'
@@ -30,7 +30,8 @@ color.ref <- function() {
   col_labels <- c("Deep", "Dark", "Regular", "Light", "Pale")
 
   # Adjust margins & move axis labels closer
-  par(mar = c(3, 3, 0, 0), mgp = c(1.5, 0.4, 0))  # Reduced mgp[2] (axis label spacing)
+  old.par <- par(mar = c(3, 3, 0, 0), mgp = c(1.5, 0.4, 0))  # Reduced mgp[2] (axis label spacing)
+  on.exit(par(old.par), add = TRUE)
 
   # Plot setup
   plot(1, 1, type = "n", xlim = c(0.5, 5.5), ylim = c(0.5, 7.5),
@@ -50,4 +51,6 @@ color.ref <- function() {
   # Add labels closer to the plot
   axis(1, at = 1:5, labels = col_labels, tick = FALSE, cex.axis = 0.8, font = 2)
   axis(2, at = 1:7, labels = rev(row_labels), tick = FALSE, las = 1, cex.axis = 0.8, font = 2)
+
+  invisible(NULL)
 }
