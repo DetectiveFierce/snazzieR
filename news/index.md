@@ -98,6 +98,9 @@ like the other summary tables.
   and
   [`ANOVA.summary.table()`](https://detectivefierce.github.io/snazzieR/reference/ANOVA.summary.table.md)
   read `>0.001` where it meant `<0.001`.
+- Table titles printed as literal LaTeX source (`\textbf{...}`) under
+  knitr 1.52, which escapes special characters in captions. Titles are
+  now set the same way under every knitr version.
 - [`color.ref()`](https://detectivefierce.github.io/snazzieR/reference/color.ref.md)
   restores the user’s graphical parameters on exit.
 

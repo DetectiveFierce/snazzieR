@@ -81,6 +81,7 @@
 <li>
 <code>model.summary.table(latex = FALSE)</code> printed blank padding rows and a duplicated column of row names in the coefficient table.</li>
 <li>The significance footnote under <code><a href="../reference/model.summary.table.html">model.summary.table()</a></code> and <code><a href="../reference/ANOVA.summary.table.html">ANOVA.summary.table()</a></code> read <code>&gt;0.001</code> where it meant <code>&lt;0.001</code>.</li>
+<li>Table titles printed as literal LaTeX source (<code>\textbf{...}</code>) under knitr 1.52, which escapes special characters in captions. Titles are now set the same way under every knitr version.</li>
 <li>
 <code><a href="../reference/color.ref.html">color.ref()</a></code> restores the user’s graphical parameters on exit.</li>
 </ul></div>
