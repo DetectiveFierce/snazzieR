@@ -1,3 +1,16 @@
+## Resubmission
+
+The first submission of 0.1.3 failed the incoming pre-tests with one test
+failure on Windows and Debian:
+
+    Failure ('test-tables.R:39:3'): title is the caption and the equation
+    sits on its own line
+
+knitr 1.52 escapes LaTeX special characters in table captions, so the bold
+title was printed as literal source. The package now inserts the caption
+after the table is built, which gives the same output under knitr 1.51 and
+1.52. A new test covers every table function.
+
 ## Submission
 
 This is an update of snazzieR from 0.1.2 to 0.1.3.
@@ -13,7 +26,9 @@ This is an update of snazzieR from 0.1.2 to 0.1.3.
 
 ## Test environments
 
-* Local: Arch Linux, R 4.6.2, `R CMD check --as-cran` on the built tarball
+* Local: Arch Linux, R 4.6.2, `R CMD check --as-cran` on the built tarball,
+  once with every dependency at its current CRAN version (knitr 1.52,
+  kableExtra 1.4.1, ggplot2 4.0.4) and once with knitr 1.51
 
 ## R CMD check results
 

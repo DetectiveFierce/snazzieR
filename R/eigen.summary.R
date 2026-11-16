@@ -47,7 +47,7 @@ eigen.summary <- function(cov.matrix,
 
     kable_table <- kable(
       eigenvectors_df,
-      caption = title,
+      caption = caption_placeholder,
       align = "c",
       format = "latex",
       escape = FALSE,
@@ -68,6 +68,7 @@ eigen.summary <- function(cov.matrix,
       kableExtra::row_spec(0, extra_latex_after = "\\arrayrulecolor{white}", hline_after = FALSE)
 
     kable_table <- sub("\\\\toprule", "", kable_table)
+    kable_table <- set_latex_caption(kable_table, title)
     preview.df <- as.data.frame(round(eigenvectors, 5))
     colnames(preview.df) <- paste0("\u03bb", seq_along(eigenvalues), " = ", round(eigenvalues, 4))
     return(snazzieR_wrap(kable_table, list(preview_table(

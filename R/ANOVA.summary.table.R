@@ -62,7 +62,7 @@ ANOVA.summary.table <- function(model, title = "ANOVA Summary", latex = TRUE, ca
     latex.table <- anova.table |>
         kableExtra::kable(
           format = "latex",
-          caption = paste0("\\textbf{", title, "}"),
+          caption = caption_placeholder,
           digits = rounding.precision,
           row.names = FALSE
         ) |>
@@ -77,6 +77,7 @@ ANOVA.summary.table <- function(model, title = "ANOVA Summary", latex = TRUE, ca
           threeparttable = TRUE
         ) |>
         kableExtra::kable_styling(latex_options = "HOLD_position")
+    latex.table <- set_latex_caption(latex.table, paste0("\\textbf{", title, "}"))
     snazzieR_wrap(latex.table, list(preview_table(
       anova.table,
       caption = title,

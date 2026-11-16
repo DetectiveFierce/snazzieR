@@ -175,7 +175,7 @@ VIF.table <- function(model,
     latex.table <- knitr::kable(
       tex,
       format = "latex",
-      caption = paste0("\\textbf{", title, "}"),
+      caption = caption_placeholder,
       align = align,
       row.names = FALSE,
       escape = FALSE
@@ -185,6 +185,7 @@ VIF.table <- function(model,
       kableExtra::column_spec(ncol(tex), border_right = TRUE) |>
       kableExtra::kable_styling(latex_options = c("HOLD_position", "scale_down"))
     latex.table <- append_latex_notes(latex.table, tex.notes)
+    latex.table <- set_latex_caption(latex.table, paste0("\\textbf{", title, "}"))
     snazzieR_wrap(latex.table, list(preview_table(shown, caption = title, notes = notes, row.names = FALSE)))
   } else {
     cat(paste0("== ", title, " ==\n"))

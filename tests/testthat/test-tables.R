@@ -77,3 +77,27 @@ test_that("significance footnote uses less-than signs", {
   expect_match(model.summary.table(m), "$<$0.001", fixed = TRUE)
   expect_match(ANOVA.summary.table(m), "$<$0.001", fixed = TRUE)
 })
+
+test_that("LaTeX captions are never escaped, whatever knitr does", {
+  m <- lm(mpg ~ wt + hp, data = mtcars)
+  p <- pls.regression(mtcars[, c("wt", "hp")], mtcars[, "mpg", drop = FALSE], n.components = 2)
+  tables <- list(
+    model.summary.table(m, title = "Cars"),
+    ANOVA.summary.table(m, title = "Cars"),
+    VIF.table(m, title = "Cars"),
+    unusual.points.table(m, title = "Cars"),
+    eigen.summary(cor(mtcars[, 1:3]), title = "Cars")
+  )
+  for (tbl in tables) {
+    expect_match(tbl, "Cars}", fixed = TRUE)
+    expect_no_match(tbl, "textbackslash", fixed = TRUE)
+    expect_no_match(tbl, "SNAZZIERCAPTIONPLACEHOLDER", fixed = TRUE)
+  }
+  for (tbl in tables[1:4]) expect_match(tbl, "\\textbf{Cars}", fixed = TRUE)
+  for (tbl in pls.summary(p, include.scores = FALSE)) {
+    expect_no_match(tbl, "textbackslash", fixed = TRUE)
+  }
+
+  # LaTeX in a title passes through as written
+  expect_match(model.summary.table(m, title = "Fit of $y$ on $x$"), "Fit of $y$ on $x$", fixed = TRUE)
+})

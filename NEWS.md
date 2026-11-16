@@ -65,6 +65,9 @@ the other summary tables.
   duplicated column of row names in the coefficient table.
 * The significance footnote under `model.summary.table()` and
   `ANOVA.summary.table()` read `>0.001` where it meant `<0.001`.
+* Table titles printed as literal LaTeX source (`\textbf{...}`) under knitr
+  1.52, which escapes special characters in captions. Titles are now set the
+  same way under every knitr version.
 * `color.ref()` restores the user's graphical parameters on exit.
 
 ## Dependencies

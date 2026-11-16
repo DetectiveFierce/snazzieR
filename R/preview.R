@@ -78,6 +78,18 @@ snazzieR_unwrap <- function(x) {
   x
 }
 
+# knitr >= 1.52 escapes LaTeX special characters in a caption when
+# `escape = TRUE`; earlier versions pass the caption through untouched. To get
+# the same output under every version, tables are built with this plain
+# placeholder as their caption and the real LaTeX is swapped in afterwards.
+caption_placeholder <- "SNAZZIERCAPTIONPLACEHOLDER"
+
+set_latex_caption <- function(x, caption) {
+  out <- sub(caption_placeholder, caption, x, fixed = TRUE)
+  attributes(out) <- attributes(x)
+  out
+}
+
 # `row.names` mirrors knitr::kable(): NA shows non-automatic row names
 # (e.g. predictor names), FALSE never shows them.
 # Insert LaTeX on its own line just before the tabular material of a kable

@@ -104,7 +104,7 @@ model.summary.table <- function(model, title = "Model Summary", latex = TRUE, ca
     latex.table <- final_table[, ] |>
       kableExtra::kable(
         format = "latex",
-        caption = paste0("\\textbf{", title, "}"),
+        caption = caption_placeholder,
         digits = rounding.precision,
         row.names = FALSE
       ) |>
@@ -122,6 +122,7 @@ model.summary.table <- function(model, title = "Model Summary", latex = TRUE, ca
       kableExtra::kable_styling(
         latex_options = c("HOLD_position", "scale_down"),
       )
+    latex.table <- set_latex_caption(latex.table, paste0("\\textbf{", title, "}"))
     latex.table <- insert_before_table(latex.table, paste0("$", latex.equation, "$\\par\\smallskip"))
     snazzieR_wrap(latex.table, list(preview_table(
       final_table,
