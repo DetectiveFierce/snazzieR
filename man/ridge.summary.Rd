@@ -17,7 +17,9 @@ ridge.summary(x, ..., include.cv.trace = TRUE, latex = TRUE)
 If \code{FALSE}, prints plain-text summary tables to the console.}
 }
 \value{
-If \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code) for PDF rendering.
+If \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code) for PDF rendering
+  It has class \code{"snazzieR_table"}, so it also previews when a chunk is run interactively
+  (see \code{\link{snazzieR_table}}).
         If \code{latex = FALSE}, prints formatted summary tables to the console and returns the underlying data frames.
 }
 \description{

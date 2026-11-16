@@ -8,7 +8,9 @@
 #' @param ... Further arguments passed to or from methods (unused).
 #' @param include.scores Logical. Whether to include score matrices (T and U). Default is \code{TRUE}.
 #'
-#' @return Returns a \code{knitr::asis_output} object (LaTeX code) for PDF rendering.
+#' @return Returns a \code{knitr::asis_output} object (LaTeX code) for PDF rendering
+#'   It has class \code{"snazzieR_table"}, so it also previews when a chunk is run interactively
+#'   (see \code{\link{snazzieR_table}}).
 #'
 #' @export
 #'
@@ -39,12 +41,9 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
   if (!requireNamespace("kableExtra", quietly = TRUE)) {
     stop("kableExtra package is required", call. = FALSE)
   }
-  if (!requireNamespace("dplyr", quietly = TRUE)) {
-    stop("dplyr package is required", call. = FALSE)
-  }
-  `%>%` <- dplyr::`%>%`
 
   kables <- list()
+  previews <- list()
 
   # === Helper to wrap table in minipage ===
   wrap_minipage <- function(latex_table, width = "0.48\\linewidth") {
@@ -57,9 +56,10 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
   if (!is.null(pls.result$W)) {
     w.df <- as.data.frame(pls.result$W)
     colnames(w.df) <- paste0("Comp ", seq_len(ncol(w.df)))
-    kables$weights.x <- knitr::kable(w.df, format = "latex", caption = "X Weights (W)", booktabs = TRUE, align = "c") %>%
-      kableExtra::kable_styling(bootstrap_options = "striped", latex_options = "HOLD_position", full_width = FALSE, position = "center") %>%
-      kableExtra::column_spec(1, border_left = TRUE) %>%
+    previews$weights.x <- preview_table(w.df, "X Weights (W)")
+    kables$weights.x <- knitr::kable(w.df, format = "latex", caption = "X Weights (W)", booktabs = TRUE, align = "c") |>
+      kableExtra::kable_styling(bootstrap_options = "striped", latex_options = "HOLD_position", full_width = FALSE, position = "center") |>
+      kableExtra::column_spec(1, border_left = TRUE) |>
       kableExtra::column_spec(ncol(w.df), border_right = TRUE)
   }
 
@@ -67,9 +67,10 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
   if (!is.null(pls.result$P_loadings)) {
     p.df <- as.data.frame(pls.result$P_loadings)
     colnames(p.df) <- paste0("Comp ", seq_len(ncol(p.df)))
-    kables$loadings.x <- knitr::kable(p.df, format = "latex", caption = "X Loadings (P)", booktabs = TRUE, align = "c", escape = FALSE) %>%
-      kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = "HOLD_position") %>%
-      kableExtra::column_spec(1, border_left = TRUE) %>%
+    previews$loadings.x <- preview_table(p.df, "X Loadings (P)")
+    kables$loadings.x <- knitr::kable(p.df, format = "latex", caption = "X Loadings (P)", booktabs = TRUE, align = "c", escape = FALSE) |>
+      kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = "HOLD_position") |>
+      kableExtra::column_spec(1, border_left = TRUE) |>
       kableExtra::column_spec(ncol(p.df), border_right = TRUE)
   }
 
@@ -77,9 +78,10 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
   if (!is.null(pls.result$C)) {
     c.df <- as.data.frame(pls.result$C)
     colnames(c.df) <- paste0("Comp ", seq_len(ncol(c.df)))
-    kables$weights.y <- knitr::kable(c.df, format = "latex", caption = "Y Weights (C)", booktabs = TRUE, align = "c") %>%
-      kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = "HOLD_position") %>%
-      kableExtra::column_spec(1, border_left = TRUE) %>%
+    previews$weights.y <- preview_table(c.df, "Y Weights (C)")
+    kables$weights.y <- knitr::kable(c.df, format = "latex", caption = "Y Weights (C)", booktabs = TRUE, align = "c") |>
+      kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = "HOLD_position") |>
+      kableExtra::column_spec(1, border_left = TRUE) |>
       kableExtra::column_spec(ncol(c.df), border_right = TRUE)
   }
 
@@ -87,9 +89,10 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
   if (!is.null(pls.result$Q_loadings)) {
     q_load.df <- as.data.frame(pls.result$Q_loadings)
     colnames(q_load.df) <- paste0("Comp ", seq_len(ncol(q_load.df)))
-    kables$loadings.y <- knitr::kable(q_load.df, format = "latex", caption = "Y Loadings (Q)", booktabs = TRUE, align = "c") %>%
-      kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = "HOLD_position") %>%
-      kableExtra::column_spec(1, border_left = TRUE) %>%
+    previews$loadings.y <- preview_table(q_load.df, "Y Loadings (Q)")
+    kables$loadings.y <- knitr::kable(q_load.df, format = "latex", caption = "Y Loadings (Q)", booktabs = TRUE, align = "c") |>
+      kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = "HOLD_position") |>
+      kableExtra::column_spec(1, border_left = TRUE) |>
       kableExtra::column_spec(ncol(q_load.df), border_right = TRUE)
   }
 
@@ -99,9 +102,10 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
       `Component` = seq_along(pls.result$B_vector),
       `Estimate` = pls.result$B_vector
     )
-    kables$b.vector <- knitr::kable(b.df, format = "latex", caption = "Regression Scalars (b)", booktabs = TRUE, align = "c") %>%
-      kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = "HOLD_position") %>%
-      kableExtra::column_spec(1, border_left = TRUE) %>%
+    previews$b.vector <- preview_table(b.df, "Regression Scalars (b)")
+    kables$b.vector <- knitr::kable(b.df, format = "latex", caption = "Regression Scalars (b)", booktabs = TRUE, align = "c") |>
+      kableExtra::kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = "HOLD_position") |>
+      kableExtra::column_spec(1, border_left = TRUE) |>
       kableExtra::column_spec(ncol(b.df), border_right = TRUE)
   }
 
@@ -116,9 +120,10 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
       extra_cols <- 0
     }
 
-    kables$coefficients <- knitr::kable(coef.df, format = "latex", caption = "Regression Coefficients (Original Scale)", booktabs = TRUE, align = "c") %>%
-      kableExtra::kable_styling(full_width = FALSE, latex_options = "HOLD_position") %>%
-      kableExtra::column_spec(1, border_left = TRUE) %>%
+    previews$coefficients <- preview_table(coef.df, "Regression Coefficients (Original Scale)")
+    kables$coefficients <- knitr::kable(coef.df, format = "latex", caption = "Regression Coefficients (Original Scale)", booktabs = TRUE, align = "c") |>
+      kableExtra::kable_styling(full_width = FALSE, latex_options = "HOLD_position") |>
+      kableExtra::column_spec(1, border_left = TRUE) |>
       kableExtra::column_spec(ncol(coef.df) + extra_cols, border_right = TRUE)
   }
 
@@ -127,18 +132,20 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
     if (!is.null(pls.result$T)) {
       t.scores.df <- as.data.frame(pls.result$T)
       colnames(t.scores.df) <- paste0("Comp ", seq_len(ncol(t.scores.df)))
-      kables$t.scores <- knitr::kable(t.scores.df, format = "latex", caption = "X Scores (T)", booktabs = TRUE, align = "c") %>%
-        kableExtra::kable_styling(full_width = FALSE, latex_options = "HOLD_position") %>%
-        kableExtra::column_spec(1, border_left = TRUE) %>%
+      previews$t.scores <- preview_table(t.scores.df, "X Scores (T)")
+      kables$t.scores <- knitr::kable(t.scores.df, format = "latex", caption = "X Scores (T)", booktabs = TRUE, align = "c") |>
+        kableExtra::kable_styling(full_width = FALSE, latex_options = "HOLD_position") |>
+        kableExtra::column_spec(1, border_left = TRUE) |>
         kableExtra::column_spec(ncol(t.scores.df), border_right = TRUE)
     }
 
     if (!is.null(pls.result$U)) {
       u.scores.df <- as.data.frame(pls.result$U)
       colnames(u.scores.df) <- paste0("Comp ", seq_len(ncol(u.scores.df)))
-      kables$u.scores <- knitr::kable(u.scores.df, format = "latex", caption = "Y Scores (U)", booktabs = TRUE, align = "c") %>%
-        kableExtra::kable_styling(full_width = FALSE, latex_options = "HOLD_position") %>%
-        kableExtra::column_spec(1, border_left = TRUE) %>%
+      previews$u.scores <- preview_table(u.scores.df, "Y Scores (U)")
+      kables$u.scores <- knitr::kable(u.scores.df, format = "latex", caption = "Y Scores (U)", booktabs = TRUE, align = "c") |>
+        kableExtra::kable_styling(full_width = FALSE, latex_options = "HOLD_position") |>
+        kableExtra::column_spec(1, border_left = TRUE) |>
         kableExtra::column_spec(ncol(u.scores.df), border_right = TRUE)
     }
   }
@@ -151,6 +158,7 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
       `Cumulative` = sprintf("%.4f\\%%", pls.result$X_cum_explained)
     )
     colnames(x.expl.df) <- gsub("\\.", " ", colnames(x.expl.df))
+    previews$explained.variance.x <- preview_table(x.expl.df, "Variance Explained by Components (X)")
     kables$explained.variance.x <- knitr::kable(
       x.expl.df,
       format = "latex",
@@ -158,9 +166,9 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
       booktabs = TRUE,
       align = "c",
       escape = FALSE
-    ) %>%
-      kableExtra::kable_styling(full_width = FALSE, latex_options = c("HOLD_position", "scale_down")) %>%
-      kableExtra::column_spec(1, width = "3cm", border_left = TRUE) %>%
+    ) |>
+      kableExtra::kable_styling(full_width = FALSE, latex_options = c("HOLD_position", "scale_down")) |>
+      kableExtra::column_spec(1, width = "3cm", border_left = TRUE) |>
       kableExtra::column_spec(ncol(x.expl.df), border_right = TRUE)
   }
 
@@ -172,6 +180,7 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
       `Cumulative` = sprintf("%.4f\\%%", pls.result$Y_cum_explained)
     )
     colnames(y.expl.df) <- gsub("\\.", " ", colnames(y.expl.df))
+    previews$explained.variance.y <- preview_table(y.expl.df, "Variance Explained by Components (Y)")
     kables$explained.variance.y <- knitr::kable(
       y.expl.df,
       format = "latex",
@@ -179,9 +188,9 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
       booktabs = TRUE,
       align = "c",
       escape = FALSE
-    ) %>%
-      kableExtra::kable_styling(full_width = FALSE, latex_options = c("HOLD_position", "scale_down")) %>%
-      kableExtra::column_spec(1, width = "3cm", border_left = TRUE) %>%
+    ) |>
+      kableExtra::kable_styling(full_width = FALSE, latex_options = c("HOLD_position", "scale_down")) |>
+      kableExtra::column_spec(1, width = "3cm", border_left = TRUE) |>
       kableExtra::column_spec(ncol(y.expl.df), border_right = TRUE)
   }
 
@@ -230,5 +239,5 @@ pls.summary <- function(x, ..., include.scores = TRUE) {
   if (!is.null(kables$explained.variance.x)) output <- c(output, kables$explained.variance.x)
   if (!is.null(kables$explained.variance.y)) output <- c(output, kables$explained.variance.y)
 
-  return(knitr::asis_output(paste(output, collapse = "\n\n")))
+  return(snazzieR_wrap(knitr::asis_output(paste(output, collapse = "\n\n")), unname(previews)))
 }

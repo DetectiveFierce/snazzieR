@@ -6,19 +6,23 @@
 \usage{
 eigen.summary(
   cov.matrix,
-  caption = "Eigenvectors of Covariance Matrix",
-  latex = TRUE
+  title = "Eigenvectors of Covariance Matrix",
+  latex = TRUE,
+  caption
 )
 }
 \arguments{
 \item{cov.matrix}{A square numeric matrix representing the covariance matrix.}
 
-\item{caption}{A character string specifying the table caption (default: "Eigenvectors of Covariance Matrix").}
+\item{title}{A character string used as the table's title (default: "Eigenvectors of Covariance Matrix").}
 
 \item{latex}{A logical indicating whether to output LaTeX table (default: TRUE). If FALSE, prints as plain text.}
+
+\item{caption}{Deprecated alias for \code{title}, kept so existing code keeps working.}
 }
 \value{
-A LaTeX formatted table (if latex = TRUE) or plaintext console output (if latex = FALSE).
+A LaTeX formatted table of class \code{"snazzieR_table"} (if latex = TRUE; see
+  \code{\link{snazzieR_table}} for interactive previews) or plaintext console output (if latex = FALSE).
 }
 \description{
 This function computes the eigenvalues and eigenvectors of a given covariance matrix,
@@ -27,5 +31,5 @@ plaintext summary displaying the results.
 }
 \examples{
 cov_matrix <- matrix(c(4, 2, 2, 3), nrow = 2)
-eigen.summary(cov_matrix, caption = "Eigenvalues and Eigenvectors", latex = FALSE)
+eigen.summary(cov_matrix, title = "Eigenvalues and Eigenvectors", latex = FALSE)
 }

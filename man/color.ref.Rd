@@ -7,7 +7,7 @@
 color.ref()
 }
 \value{
-A plot displaying the color palette.
+Called for its side effect of drawing the color palette; returns \code{NULL} invisibly.
 }
 \description{
 This function generates a plot displaying a predefined color palette with

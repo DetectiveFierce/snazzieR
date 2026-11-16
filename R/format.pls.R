@@ -8,7 +8,8 @@
 #' @param include.scores Logical. Whether to include score matrices (T and U). Default is \code{TRUE}.
 #' @param latex Logical. If \code{TRUE}, produces LaTeX output (for PDF rendering). If \code{FALSE}, prints to console. Default is \code{FALSE}.
 #'
-#' @return When \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code). When \code{FALSE}, prints formatted tables to console.
+#' @return When \code{latex = TRUE}, returns a \code{knitr::asis_output} object (LaTeX code) of class
+#'   \code{"snazzieR_table"} (see \code{\link{snazzieR_table}} for interactive previews). When \code{FALSE}, prints formatted tables to console.
 #'
 #' @method format pls
 #' @export
@@ -19,14 +20,14 @@ format.pls <- function(x, ..., include.scores = TRUE, latex = FALSE) {
         stop("Error! Non-PLS model passed to PLS formatting function (format.pls.R)", call. = FALSE)
     }
 
-    `%>%` <- dplyr::`%>%`
     kables <- list()
+    previews <- list()
 
     make_table <- function(df, caption, escape = TRUE) {
         if (latex) {
-            knitr::kable(df, format = "latex", caption = caption, booktabs = TRUE, align = "c", escape = escape) %>%
-                kableExtra::kable_styling(latex_options = "HOLD_position", full_width = FALSE) %>%
-                kableExtra::column_spec(1, border_left = TRUE) %>%
+            knitr::kable(df, format = "latex", caption = caption, booktabs = TRUE, align = "c", escape = escape) |>
+                kableExtra::kable_styling(latex_options = "HOLD_position", full_width = FALSE) |>
+                kableExtra::column_spec(1, border_left = TRUE) |>
                 kableExtra::column_spec(ncol(df), border_right = TRUE)
         } else {
             print(knitr::kable(df, format = "simple", caption = caption, digits = 4))
@@ -41,6 +42,7 @@ format.pls <- function(x, ..., include.scores = TRUE, latex = FALSE) {
     add_table <- function(name, df, caption, escape = TRUE) {
         if (!is.null(df)) {
             kables[[name]] <<- make_table(df, caption, escape = escape)
+            previews[[name]] <<- preview_table(df, caption)
         }
     }
 
@@ -119,5 +121,5 @@ format.pls <- function(x, ..., include.scores = TRUE, latex = FALSE) {
 
     output <- c(output, kables$b.vector, kables$coefficients, kables$explained.x, kables$explained.y)
 
-    return(knitr::asis_output(paste(output, collapse = "\n\n")))
+    return(snazzieR_wrap(knitr::asis_output(paste(output, collapse = "\n\n")), unname(previews)))
 }

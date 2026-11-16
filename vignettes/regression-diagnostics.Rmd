@@ -1,0 +1,141 @@
+---
+title: "Regression Diagnostics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Regression Diagnostics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 7,
+  fig.height = 5.5,
+  dpi = 72
+)
+```
+
+snazzieR has four functions for checking a fitted regression: two plots and
+two tables. This article runs all four on one model.
+
+```{r model}
+library(snazzieR)
+
+model <- lm(mpg ~ wt + hp, data = mtcars)
+```
+
+The tables below use `latex = FALSE` because this page is HTML. In a PDF
+report, leave `latex` at its default and the same calls return LaTeX tables.
+
+## Diagnostic plots
+
+`diagnostics.plots()` draws the four panels of `plot(model)` as ggplots in
+`snazzieR.theme()`.
+
+```{r diagnostics}
+diagnostics.plots(model)
+```
+
+Each panel labels its three most extreme observations with their row numbers.
+`id.n` changes how many are labelled, and `cook.levels` sets the Cook's
+distance contours in the leverage panel.
+
+The result is a list, so one panel can be drawn or modified by itself:
+
+```{r qq, fig.width = 4.5, fig.height = 3.5}
+diagnostics.plots(model)$plots$qq
+```
+
+The four panels are named `residuals.fitted`, `qq`, `scale.location` and
+`residuals.leverage`.
+
+## Marginal model plots
+
+`marginal.model.plots()` plots the response against each numeric term and
+against the fitted values. Every panel carries two loess smooths: one of the
+data (solid) and one of the model's fitted values (dashed). Where the two
+curves separate, the model misses part of the relationship with that
+variable.
+
+```{r mmp}
+marginal.model.plots(model, title = "Marginal Model Plots: Fuel Economy")
+```
+
+The smooths use the same loess settings as `car::mmps()`. Factors and
+interaction terms are skipped, as they are in car.
+
+## Unusual observations
+
+`unusual.points.table()` lists the observations that meet at least one of
+these criteria:
+
+| Flag | Criterion |
+|---|---|
+| High leverage | leverage above 2(p + 1)/n, twice the average |
+| Outlier | standardized residual beyond ±2 |
+| Influential | Cook's distance above 4/(n − 2) |
+| Bad leverage | high leverage and an outlier |
+
+```{r unusual}
+unusual.points.table(model, latex = FALSE, id = rownames(mtcars))
+```
+
+`id` takes one label per row of the data, or the name of a column that holds
+the labels. Without it, observations are identified by the row names of the
+data.
+
+Three arguments narrow the table. `flag` chooses which criteria count,
+`n.max` keeps the rows with the largest Cook's distances, and
+`leverage.cutoff`, `residual.cutoff` and `cook.cutoff` replace the default
+thresholds.
+
+```{r unusual-narrow}
+unusual.points.table(
+  model,
+  latex = FALSE,
+  id = rownames(mtcars),
+  flag = c("leverage", "outlier"),
+  n.max = 3
+)
+```
+
+## Collinearity
+
+`VIF.table()` reports a variance inflation factor for each term, sorted from
+highest to lowest. A term is flagged moderate above 5 and severe above 10;
+`moderate` and `severe` change those cutoffs.
+
+```{r vif}
+bigger <- lm(mpg ~ wt + hp + disp + qsec, data = mtcars)
+VIF.table(bigger, latex = FALSE)
+```
+
+A factor has several coefficients and therefore no ordinary VIF. For such
+terms the table reports the generalized VIF of Fox and Monette (1992), and
+the VIF column shows the adjusted GVIF squared so that it stays on the same
+scale as the other rows. The values match `car::vif()`.
+
+```{r vif-factor}
+VIF.table(lm(mpg ~ wt + hp + factor(cyl), data = mtcars), latex = FALSE)
+```
+
+`cols` limits the table to the columns you want:
+
+```{r vif-cols}
+VIF.table(bigger, latex = FALSE, cols = c("VIF", "1/VIF"))
+```
+
+## Running chunks interactively
+
+With `latex = TRUE`, both tables return LaTeX. If you run such a chunk with
+the "Run" button in RStudio or Positron, snazzieR shows an HTML preview of
+the table; knitting the document produces the LaTeX. `?snazzieR_table`
+describes the `snazzieR.preview` option that controls this.
+
+## Reference
+
+Fox, J. and Monette, G. (1992). Generalized collinearity diagnostics.
+*Journal of the American Statistical Association*, 87, 178--183.
