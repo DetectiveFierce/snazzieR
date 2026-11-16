@@ -16,8 +16,8 @@ A ggplot2 theme object.
 
 ## See also
 
-[`color.list`](https://jesusbutforgaypeople.github.io/snazzieR/reference/colors.md),
-[`color.ref`](https://jesusbutforgaypeople.github.io/snazzieR/reference/color.ref.md)
+[`color.list`](https://detectivefierce.github.io/snazzieR/reference/colors.md),
+[`color.ref`](https://detectivefierce.github.io/snazzieR/reference/color.ref.md)
 
 ## Examples
 

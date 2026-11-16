@@ -9,7 +9,7 @@ viewing).
 ## Usage
 
 ``` r
-model.summary.table(model, caption, latex = TRUE)
+model.summary.table(model, title = "Model Summary", latex = TRUE, caption)
 ```
 
 ## Arguments
@@ -18,9 +18,11 @@ model.summary.table(model, caption, latex = TRUE)
 
   A linear model object (typically the result of \`lm()\`).
 
-- caption:
+- title:
 
-  A character string to be used as the caption for the table.
+  A character string used as the table's title (its LaTeX caption).
+  Defaults to `"Model Summary"`. The fitted model equation is typeset on
+  its own centered line between the title and the table.
 
 - latex:
 
@@ -28,11 +30,18 @@ model.summary.table(model, caption, latex = TRUE)
   \`kableExtra\`. If \`FALSE\`, prints plain-text summary tables to the
   console.
 
+- caption:
+
+  Deprecated alias for `title`, kept so existing code keeps working.
+
 ## Value
 
 If \`latex = TRUE\`, returns a LaTeX-formatted \`kableExtra\` table
-object. If \`latex = FALSE\`, prints formatted summary tables to the
-console and returns the underlying data frame.
+object (of class `"snazzieR_table"`, which also previews nicely when a
+chunk is run interactively; see
+[`snazzieR_table`](https://detectivefierce.github.io/snazzieR/reference/snazzieR_table.md)).
+If \`latex = FALSE\`, prints formatted summary tables to the console and
+returns the underlying data frame.
 
 ## Examples
 
@@ -41,20 +50,18 @@ console and returns the underlying data frame.
 model <- lm(mpg ~ wt + hp, data = mtcars)
 
 # Print a plain-text version to the console
-model.summary.table(model, caption = "Linear Model Summary", latex = FALSE)
+model.summary.table(model, title = "Linear Model Summary", latex = FALSE)
 #> == Linear Model Summary ==
-#> Equation: mpg = 37.227 + -3.878*wt + -0.032*hp
+#> Equation: mpg = 37.23 - 3.878*wt - 0.03177*hp
 #> 
 #> Coefficient Table:
 #> 
 #> 
-#>               Term          Estimate   Std.Error   P.Value   Signif. 
-#> ------------  ------------  ---------  ----------  --------  --------
-#> (Intercept)   (Intercept)   37.22727   1.59879     0         :3      
-#> wt            wt            -3.87783   0.63273     0         :3      
-#> hp            hp            -0.03177   0.00903     0.00145   :)      
-#> 1                                                                    
-#> 5                                                                    
+#> Term           Estimate   Std.Error   P.Value  Signif. 
+#> ------------  ---------  ----------  --------  --------
+#> (Intercept)    37.22727     1.59879   0.00000  :3      
+#> wt             -3.87783     0.63273   0.00000  :3      
+#> hp             -0.03177     0.00903   0.00145  :)      
 #> 
 #> Model Statistics:
 #> 

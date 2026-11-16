@@ -1,10 +1,83 @@
-Because your linear models deserve better than console output. A sleek
-color palette and kable styling to make your regression results look
-sharper than they are. Includes support for Partial Least Squares (PLS)
-regression via both the SVD and NIPALS algorithms, along with a unified
-interface for model fitting and fabulous LaTeX and console output
-formatting. See the package website at
-\<<https://finitesample.space/snazzier>\>.
+# snazzieR
+
+Chic and sleek functions for beautiful statisticians.
+
+snazzieR formats regression output for R Markdown reports. Its tables
+come out as LaTeX for PDF documents or as plain text for the console,
+and its plots share one ggplot2 theme and a palette of 35 named colors.
+
+## Installation
+
+``` r
+
+# Released version, from CRAN
+install.packages("snazzieR")
+
+# Development version, from GitHub
+# install.packages("remotes")
+remotes::install_github("DetectiveFierce/snazzieR")
+```
+
+## Functions
+
+| Task | Functions |
+|----|----|
+| Summarize a linear model | [`model.summary.table()`](https://detectivefierce.github.io/snazzieR/reference/model.summary.table.md), [`ANOVA.summary.table()`](https://detectivefierce.github.io/snazzieR/reference/ANOVA.summary.table.md), [`model.equation()`](https://detectivefierce.github.io/snazzieR/reference/model.equation.md) |
+| Check a fitted model | [`diagnostics.plots()`](https://detectivefierce.github.io/snazzieR/reference/diagnostics.plots.md), [`marginal.model.plots()`](https://detectivefierce.github.io/snazzieR/reference/marginal.model.plots.md), [`unusual.points.table()`](https://detectivefierce.github.io/snazzieR/reference/unusual.points.table.md), [`VIF.table()`](https://detectivefierce.github.io/snazzieR/reference/VIF.table.md) |
+| Partial least squares | [`pls.regression()`](https://detectivefierce.github.io/snazzieR/reference/pls.regression.md), [`SVD.pls()`](https://detectivefierce.github.io/snazzieR/reference/SVD.pls.md), [`NIPALS.pls()`](https://detectivefierce.github.io/snazzieR/reference/NIPALS.pls.md), [`pls.summary()`](https://detectivefierce.github.io/snazzieR/reference/pls.summary.md) |
+| Ridge regression | [`ridge.regression()`](https://detectivefierce.github.io/snazzieR/reference/ridge.regression.md), [`ridge.summary()`](https://detectivefierce.github.io/snazzieR/reference/ridge.summary.md) |
+| Eigenvalues of a correlation or covariance matrix | [`eigen.summary()`](https://detectivefierce.github.io/snazzieR/reference/eigen.summary.md) |
+| Plot styling | [`snazzieR.theme()`](https://detectivefierce.github.io/snazzieR/reference/snazzieR.theme.md), [`color.ref()`](https://detectivefierce.github.io/snazzieR/reference/color.ref.md), and colors such as `Red` and `Dark.Blue` |
+
+## Example
+
+``` r
+
+library(snazzieR)
+
+model <- lm(mpg ~ wt + hp, data = mtcars)
+
+# Coefficients, fit statistics and the fitted equation in one table.
+# Returns LaTeX by default; latex = FALSE prints to the console.
+model.summary.table(model, title = "Fuel Economy", latex = FALSE)
+
+# The four plot(lm) panels as ggplots
+diagnostics.plots(model)
+
+# Observations worth a second look, labelled by car name
+unusual.points.table(model, latex = FALSE, id = rownames(mtcars))
+
+# Variance inflation factors
+VIF.table(model, latex = FALSE)
+```
+
+![Residuals vs Fitted, Q-Q, Scale-Location and Residuals vs Leverage
+panels drawn by
+diagnostics.plots()](reference/figures/README-diagnostics.png)
+
+## Table previews
+
+A LaTeX table has nothing to show when you run a chunk with the “Run”
+button, so snazzieR tables print an HTML preview in RStudio and Positron
+and a plain-text preview in other interactive sessions. Knitting
+produces the LaTeX. Set `options(snazzieR.preview = "html")`, `"text"`
+or `"latex"` to pick one;
+[`?snazzieR_table`](https://detectivefierce.github.io/snazzieR/reference/snazzieR_table.md)
+has the details.
+
+## Documentation
+
+- Guide with rendered examples: <https://finitesample.space/snazzier>
+- Function reference and articles:
+  <https://detectivefierce.github.io/snazzieR/>
+- Changes in each release:
+  [NEWS.md](https://detectivefierce.github.io/snazzieR/NEWS.md)
+
+Report bugs at <https://github.com/DetectiveFierce/snazzieR/issues>.
+
+## License
+
+MIT
 
 # Package index
 
@@ -12,65 +85,87 @@ formatting. See the package website at
 
 Functions for Partial Least Squares regression
 
-- [`pls.regression()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/pls.regression.md)
+- [`pls.regression()`](https://detectivefierce.github.io/snazzieR/reference/pls.regression.md)
   : Partial Least Squares (PLS) Regression Interface
-- [`NIPALS.pls()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/NIPALS.pls.md)
+- [`NIPALS.pls()`](https://detectivefierce.github.io/snazzieR/reference/NIPALS.pls.md)
   : Partial Least Squares Regression via NIPALS (Internal)
-- [`SVD.pls()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/SVD.pls.md)
+- [`SVD.pls()`](https://detectivefierce.github.io/snazzieR/reference/SVD.pls.md)
   : Partial Least Squares Regression via SVD (Internal)
-- [`pls.summary()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/pls.summary.md)
+- [`pls.summary()`](https://detectivefierce.github.io/snazzieR/reference/pls.summary.md)
   : Format PLS Model Output as LaTeX Tables
 
 ## Formatting Functions
 
 Functions for formatting and displaying results
 
-- [`model.summary.table()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/model.summary.table.md)
+- [`model.summary.table()`](https://detectivefierce.github.io/snazzieR/reference/model.summary.table.md)
   : Generate a Summary Table for a Linear Model
-- [`ANOVA.summary.table()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/ANOVA.summary.table.md)
+- [`ANOVA.summary.table()`](https://detectivefierce.github.io/snazzieR/reference/ANOVA.summary.table.md)
   : Generate a Summary Table for ANOVA Results
-- [`eigen.summary()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/eigen.summary.md)
+- [`eigen.summary()`](https://detectivefierce.github.io/snazzieR/reference/eigen.summary.md)
   : Summarize Eigenvalues and Eigenvectors of a Covariance Matrix
-- [`model.equation()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/model.equation.md)
+- [`model.equation()`](https://detectivefierce.github.io/snazzieR/reference/model.equation.md)
   : Generate a Model Equation from a Linear Model
-- [`format(`*`<pls>`*`)`](https://jesusbutforgaypeople.github.io/snazzieR/reference/format.pls.md)
+- [`format(`*`<pls>`*`)`](https://detectivefierce.github.io/snazzieR/reference/format.pls.md)
   : Format PLS Model Output as LaTeX or Console Tables
+- [`print(`*`<snazzieR_table>`*`)`](https://detectivefierce.github.io/snazzieR/reference/snazzieR_table.md)
+  [`knit_print(`*`<snazzieR_table>`*`)`](https://detectivefierce.github.io/snazzieR/reference/snazzieR_table.md)
+  : Interactive Previews for snazzieR Tables
+
+## Regression Diagnostics
+
+Diagnostic plots and tables of unusual observations
+
+- [`diagnostics.plots()`](https://detectivefierce.github.io/snazzieR/reference/diagnostics.plots.md)
+  [`print(`*`<snazzieR_plot_grid>`*`)`](https://detectivefierce.github.io/snazzieR/reference/diagnostics.plots.md)
+  : Snazzy Regression Diagnostic Plots
+- [`marginal.model.plots()`](https://detectivefierce.github.io/snazzieR/reference/marginal.model.plots.md)
+  : Snazzy Marginal Model Plots
+- [`unusual.points.table()`](https://detectivefierce.github.io/snazzieR/reference/unusual.points.table.md)
+  : Table of Unusual Observations in a Regression
+- [`VIF.table()`](https://detectivefierce.github.io/snazzieR/reference/VIF.table.md)
+  : Variance Inflation Factor Table
 
 ## Ridge Regression
 
 Functions for ridge models
 
-- [`create_kfold_splits()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/create_kfold_splits.md)
+- [`create_kfold_splits()`](https://detectivefierce.github.io/snazzieR/reference/create_kfold_splits.md)
   : Create K-Fold Cross Validation Splits
-- [`kfold_cross_validation()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/kfold_cross_validation.md)
+- [`kfold_cross_validation()`](https://detectivefierce.github.io/snazzieR/reference/kfold_cross_validation.md)
   : Perform K-Fold Cross Validation
-- [`predict(`*`<ridge.model>`*`)`](https://jesusbutforgaypeople.github.io/snazzieR/reference/predict.ridge.model.md)
+- [`predict(`*`<ridge.model>`*`)`](https://detectivefierce.github.io/snazzieR/reference/predict.ridge.model.md)
   : Predict Method for Ridge Model Objects
-- [`print(`*`<ridge.model>`*`)`](https://jesusbutforgaypeople.github.io/snazzieR/reference/print.ridge.model.md)
+- [`print(`*`<ridge.model>`*`)`](https://detectivefierce.github.io/snazzieR/reference/print.ridge.model.md)
   : Print Method for Ridge Model Objects
-- [`ridge.regression()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/ridge.regression.md)
+- [`ridge.regression()`](https://detectivefierce.github.io/snazzieR/reference/ridge.regression.md)
   : Ridge Regression with Automatic Lambda Selection
-- [`ridge.summary()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/ridge.summary.md)
+- [`ridge.summary()`](https://detectivefierce.github.io/snazzieR/reference/ridge.summary.md)
   : Format Ridge Model Output as LaTeX Tables
 
 ## Theme Functions
 
 Functions for customizing the appearance
 
-- [`snazzieR.theme()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/snazzieR.theme.md)
+- [`snazzieR.theme()`](https://detectivefierce.github.io/snazzieR/reference/snazzieR.theme.md)
   : A Custom ggplot2 Theme for Publication-Ready Plots
-- [`color.list`](https://jesusbutforgaypeople.github.io/snazzieR/reference/colors.md)
+- [`color.list`](https://detectivefierce.github.io/snazzieR/reference/colors.md)
   : SnazzieR Color Palette
-- [`color.ref()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/color.ref.md)
+- [`color.ref()`](https://detectivefierce.github.io/snazzieR/reference/color.ref.md)
   : Display a Color Reference Palette
 
 # Articles
 
+### Regression Diagnostics
+
+- [Regression
+  Diagnostics](https://detectivefierce.github.io/snazzieR/articles/regression-diagnostics.md):
+
 ### Partial Least Squares (PLS) Regression
 
 - [PLS
-  Overview](https://jesusbutforgaypeople.github.io/snazzieR/articles/pls-overview.md):
+  Overview](https://detectivefierce.github.io/snazzieR/articles/pls-overview.md):
 - [NIPALS Algorithm for PLS
-  Regression](https://jesusbutforgaypeople.github.io/snazzieR/articles/pls-nipals.md):
+  Regression](https://detectivefierce.github.io/snazzieR/articles/pls-nipals.md):
 - [SVD
-  Algorithm](https://jesusbutforgaypeople.github.io/snazzieR/articles/pls-svd.md):
+  Algorithm](https://detectivefierce.github.io/snazzieR/articles/pls-svd.md):

@@ -21,9 +21,9 @@ covariance with the response variable(s). It is especially useful when:
 ### Learn More
 
 - NIPALS Algorithm:
-  [`vignette("pls-nipals", package = "snazzieR")`](https://jesusbutforgaypeople.github.io/snazzieR/articles/pls-nipals.md)
+  [`vignette("pls-nipals", package = "snazzieR")`](https://detectivefierce.github.io/snazzieR/articles/pls-nipals.md)
 - SVD Method:
-  [`vignette("pls-svd", package = "snazzieR")`](https://jesusbutforgaypeople.github.io/snazzieR/articles/pls-svd.md)
+  [`vignette("pls-svd", package = "snazzieR")`](https://detectivefierce.github.io/snazzieR/articles/pls-svd.md)
 - Output Formatting: `vignette("pls-formatting", package = "snazzieR")`
 
 ### The Origins of PLS

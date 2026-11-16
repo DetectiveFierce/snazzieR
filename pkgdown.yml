@@ -1,11 +1,12 @@
-pandoc: 3.1.11
-pkgdown: 2.2.0
+pandoc: 3.8.3
+pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   pls-nipals: pls-nipals.html
   pls-overview: pls-overview.html
   pls-svd: pls-svd.html
-last_built: 2025-12-16T23:21Z
+  regression-diagnostics: regression-diagnostics.html
+last_built: 2026-11-16T18:43Z
 urls:
-  reference: https://jesusbutforgaypeople.github.io/snazzieR/reference
-  article: https://jesusbutforgaypeople.github.io/snazzieR/articles
+  reference: https://detectivefierce.github.io/snazzieR/reference
+  article: https://detectivefierce.github.io/snazzieR/articles

@@ -143,7 +143,7 @@ estimation for nonorthogonal problems. *Technometrics*, 12(1), 55-67.
 
 ## See also
 
-[`predict.ridge.model`](https://jesusbutforgaypeople.github.io/snazzieR/reference/predict.ridge.model.md)
+[`predict.ridge.model`](https://detectivefierce.github.io/snazzieR/reference/predict.ridge.model.md)
 
 ## Examples
 

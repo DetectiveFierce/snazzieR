@@ -1,6 +1,7 @@
 # NIPALS Algorithm for PLS Regression
 
 ``` r
+
 NIPALS.pls <- function(x, y, n.components = NULL) {
   rank <- qr(x)$rank
   if (is.null(n.components)) {

@@ -1,6 +1,7 @@
 # SVD Algorithm
 
 ``` r
+
 SVD.pls <- function(x, y, n.components = NULL) {
   # Step 1: Center and scale X and Y
   X <- scale(x, center = TRUE, scale = TRUE)

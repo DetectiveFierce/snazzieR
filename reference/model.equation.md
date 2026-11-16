@@ -36,7 +36,7 @@ model <- lm(mpg ~ wt + hp, data = mtcars)
 
 # Get LaTeX equation
 model.equation(model)
-#> [1] "\\[\\text{mpg} = 37.227 - 3.878 (\\text{wt}) - 0.032 (\\text{hp})\\]"
+#> [1] "\\[\\widehat{\\text{mpg}} = 37.23 - 3.878\\,\\text{wt} - 0.03177\\,\\text{hp}\\]"
 #> attr(,"class")
 #> [1] "knit_asis"
 #> attr(,"knit_cacheable")
@@ -44,5 +44,5 @@ model.equation(model)
 
 # Print equation to console
 model.equation(model, latex = FALSE)
-#> mpg = 37.227 - 3.878 (wt) - 0.032 (hp) 
+#> mpg = 37.23 - 3.878*wt - 0.03177*hp 
 ```

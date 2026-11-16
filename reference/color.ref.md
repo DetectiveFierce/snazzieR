@@ -12,7 +12,8 @@ color.ref()
 
 ## Value
 
-A plot displaying the color palette.
+Called for its side effect of drawing the color palette; returns `NULL`
+invisibly.
 
 ## Details
 

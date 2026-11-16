@@ -1,7 +1,7 @@
 # Format PLS Model Output as LaTeX Tables
 
 Formats and displays Partial Least Squares (PLS) model output from
-[`pls.regression()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/pls.regression.md)
+[`pls.regression()`](https://detectivefierce.github.io/snazzieR/reference/pls.regression.md)
 as LaTeX tables for PDF rendering.
 
 ## Usage
@@ -15,7 +15,7 @@ pls.summary(x, ..., include.scores = TRUE)
 - x:
 
   A list returned by
-  [`pls.regression()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/pls.regression.md)
+  [`pls.regression()`](https://detectivefierce.github.io/snazzieR/reference/pls.regression.md)
   (class `"pls"`) containing PLS model components.
 
 - ...:
@@ -31,7 +31,9 @@ pls.summary(x, ..., include.scores = TRUE)
 
 Returns a
 [`knitr::asis_output`](https://rdrr.io/pkg/knitr/man/asis_output.html)
-object (LaTeX code) for PDF rendering.
+object (LaTeX code) for PDF rendering It has class `"snazzieR_table"`,
+so it also previews when a chunk is run interactively (see
+[`snazzieR_table`](https://detectivefierce.github.io/snazzieR/reference/snazzieR_table.md)).
 
 ## Examples
 

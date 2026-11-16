@@ -3,9 +3,9 @@
 Performs Partial Least Squares (PLS) regression using either the NIPALS
 or SVD algorithm for component extraction. This is the main user-facing
 function for computing PLS models. Internally, it delegates to either
-[`NIPALS.pls()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/NIPALS.pls.md)
+[`NIPALS.pls()`](https://detectivefierce.github.io/snazzieR/reference/NIPALS.pls.md)
 or
-[`SVD.pls()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/SVD.pls.md).
+[`SVD.pls()`](https://detectivefierce.github.io/snazzieR/reference/SVD.pls.md).
 
 ## Usage
 
@@ -38,9 +38,9 @@ pls.regression(x, y, n.components = NULL, calc.method = c("SVD", "NIPALS"))
 ## Value
 
 A list (from either
-[`SVD.pls()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/SVD.pls.md)
+[`SVD.pls()`](https://detectivefierce.github.io/snazzieR/reference/SVD.pls.md)
 or
-[`NIPALS.pls()`](https://jesusbutforgaypeople.github.io/snazzieR/reference/NIPALS.pls.md))
+[`NIPALS.pls()`](https://detectivefierce.github.io/snazzieR/reference/NIPALS.pls.md))
 containing:
 
 - model.type:
@@ -108,8 +108,8 @@ squares regression. *Chemometrics and Intelligent Laboratory Systems*,
 
 ## See also
 
-[`SVD.pls`](https://jesusbutforgaypeople.github.io/snazzieR/reference/SVD.pls.md),
-[`NIPALS.pls`](https://jesusbutforgaypeople.github.io/snazzieR/reference/NIPALS.pls.md)
+[`SVD.pls`](https://detectivefierce.github.io/snazzieR/reference/SVD.pls.md),
+[`NIPALS.pls`](https://detectivefierce.github.io/snazzieR/reference/NIPALS.pls.md)
 
 ## Examples
 

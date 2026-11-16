@@ -1,7 +1,7 @@
 # Partial Least Squares Regression via SVD (Internal)
 
 This function is called internally by
-[`pls.regression`](https://jesusbutforgaypeople.github.io/snazzieR/reference/pls.regression.md)
+[`pls.regression`](https://detectivefierce.github.io/snazzieR/reference/pls.regression.md)
 and is not intended to be used directly. Use
 `pls.regression(..., calc.method = "SVD")` instead.
 

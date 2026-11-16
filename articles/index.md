@@ -1,10 +1,15 @@
 # Articles
 
+### Regression Diagnostics
+
+- [Regression
+  Diagnostics](https://detectivefierce.github.io/snazzieR/articles/regression-diagnostics.md):
+
 ### Partial Least Squares (PLS) Regression
 
 - [PLS
-  Overview](https://jesusbutforgaypeople.github.io/snazzieR/articles/pls-overview.md):
+  Overview](https://detectivefierce.github.io/snazzieR/articles/pls-overview.md):
 - [NIPALS Algorithm for PLS
-  Regression](https://jesusbutforgaypeople.github.io/snazzieR/articles/pls-nipals.md):
+  Regression](https://detectivefierce.github.io/snazzieR/articles/pls-nipals.md):
 - [SVD
-  Algorithm](https://jesusbutforgaypeople.github.io/snazzieR/articles/pls-svd.md):
+  Algorithm](https://detectivefierce.github.io/snazzieR/articles/pls-svd.md):
