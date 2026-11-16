@@ -29,12 +29,18 @@ This is an update of snazzieR from 0.1.2 to 0.1.3.
 * Local: Arch Linux, R 4.6.2, `R CMD check --as-cran` on the built tarball,
   once with every dependency at its current CRAN version (knitr 1.52,
   kableExtra 1.4.1, ggplot2 4.0.4) and once with knitr 1.51
+* R-hub (GitHub Actions), all with knitr 1.52:
+  * Windows, R-devel
+  * Linux, R-devel
+  * macOS, R-devel
+  * Ubuntu, R-release
 
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
 
-The note is specific to the local machine:
+The R-hub runs finished with Status: OK. The note comes from the local
+machine only:
 
     checking HTML version of manual ... NOTE
     Skipping checking math rendering: package 'V8' unavailable
